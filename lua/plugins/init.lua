@@ -28,6 +28,6 @@ return require('packer').startup(function(use)
   ------------------------------------------
   
   -- keybinds for installed plugins
-  require('plugin_keybindings')
+  require('plugins.plugin_keybindings')
 
 end)
