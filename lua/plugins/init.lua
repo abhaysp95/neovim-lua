@@ -17,6 +17,21 @@ return require('packer').startup(function(use)
   -- vim-tmux navigator
   use 'christoomey/vim-tmux-navigator'
 
+  -- LSP
+  use 'neovim/nvim-lspconfig'
+
+  -- autocomplete
+  use {
+    'hrsh7th/nvim-cmp',
+    requires = {
+      'L3MON4D3/LuaSnip',
+      'hrsh7th/cmp-nvim-lsp',
+      'hrsh7th/cmp-path',
+      'hrsh7th/cmp-buffer',
+      'saadparwaiz1/cmp_luasnip',
+    },
+  }
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then
@@ -29,5 +44,6 @@ return require('packer').startup(function(use)
   
   -- keybinds for installed plugins
   require('plugins.plugin_keybindings')
+  require('plugins.nvim-cmp')
 
 end)

@@ -1,6 +1,7 @@
-local default_opts = { noremap = true, silent = true }
-
 local term_opts = { silent = true }
+local expr_opts = { expr = true }
+local default_opts = { noremap = true, silent = true }
+-- local def_expr_opts = { noremap = true, silent = true, expr = true }
 
 -- shorten the function name
 local keybind = vim.api.nvim_set_keymap
@@ -11,7 +12,7 @@ vim.g.mapleader = " "
 -- print(vim.inspect(vim.g.mapleader))
 
 -- setup for localleader key
-keybind('', '\\', '<NOP>', default_opts)
+keybind('', [[\]], '<NOP>', default_opts)
 vim.g.maplocalleader = "\\"
 
 -- Modes
@@ -42,7 +43,7 @@ keybind('n', 'p', 'p`]', default_opts)
 keybind('n', 'p', 'p`]', default_opts)
 
 -- repeat replacement
-keybind('n', '<Leader>s*', ':let@/="\\<".expand("<cword>")."\\>"<CR>cgn', default_opts)
+keybind('n', '<Leader>s*', [[:let@/='\<'.expand('<cword>').'\>'<CR>cgn]], default_opts)
 keybind('x', '<Leader>s*', 'sy:let @/=@s<CR>cgn', default_opts)
 
 -- press enter for newline without insert
@@ -85,11 +86,22 @@ keybind('n', 'ccp', ':cprevious<CR>', default_opts)
 keybind('n', 'ccc', ':cclose<CR>', default_opts)
 keybind('n', 'cco', ':copen<CR>', default_opts)
 
+-- better indenting
+keybind('n', '<', '<gv', default_opts)
+keybind('n', '>', '>gv', default_opts)
+
+-- move selected line/bloc in visual mode
+keybind('x', 'K', [[:move '<-2<CR>gv-gv']], default_opts)
+keybind('x', 'J', [[move '>+1<CR>gv-gv']], default_opts)
+
 -- default trees
 keybind('n', '<Leader>nl', ':Lex! | vertical resize 30<CR>', default_opts)
 
+-- move between buffers
 -- cycle between previous buffer
-keybind('n', '<S-Tab>', ':b#<CR>', default_opts)
+keybind('n', '<M-TAB>', ':b#<CR>', default_opts)
+keybind('n', '<M-b>', ':bnext<CR>', default_opts)
+keybind('n', '<M-B>', ':bprev<CR>', default_opts)
 
 -- select full file
 keybind('n', 'gG', 'gg0vG$', default_opts)
@@ -130,7 +142,7 @@ keybind('n', '<Leader>P', '"+p', default_opts)
 keybind('n', '<Leader>bd', ':silent :w | %bd | e#<CR>', default_opts)
 
 -- cycle through splits
-keybind('n', '<C-Tab>', '<C-w>w', default_opts)
+keybind('n', '<C-TAB>', '<C-w>w', default_opts)
 
 -- better navigation between windows
 keybind('n', '<C-h>', '<C-w>h>', default_opts)
@@ -149,8 +161,14 @@ keybind('n', '<Localleader>th', '<C-w>t<C-w>H', default_opts)
 keybind('n', '<Localleader>tk', '<C-w>t<C-w>K', default_opts)
 
 -- some expand settings
-keybind('n', '<Leader>hw', ':h <C-R>=expand("<cword>")<CR><CR>', default_opts)
+keybind('n', '<Leader>hw', [[:h <C-R>=expand('<cword>')<CR><CR>]], default_opts)
 
 -- misc
 keybind('i', 'j\'', '<Esc>', default_opts)
 keybind('n', 'c', '"_c', default_opts)
+
+-- TAB completion (seems problematic)
+keybind('i', '<TAB>', [[pumvisible() ? "\<C-n>" : "\<TAB>"]], vim.tbl_extend("force", expr_opts, default_opts))
+				
+-- Thoughts:  consider making function instead of writing every line, check if making a function and calling is worth it or not
+-- put up terminal window naviagation <C-\><C-N>
