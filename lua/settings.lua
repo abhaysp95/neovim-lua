@@ -9,7 +9,7 @@
 -- aliases
 
 local cmd = vim.cmd
--- local exec = vim.api.nvim_exec
+local exec = vim.api.nvim_exec
 local fn = vim.fn
 -- local g = vim.g
 local set = vim.opt
@@ -23,11 +23,12 @@ set.clipboard = { 'unnamed', 'unnamedplus' } -- copy/paste to system clipboard
 -- insert mode completion options
 set.completeopt = { 'menuone', 'noinsert', 'noselect', 'longest' }
 
-
 set.tabstop = 2
 set.softtabstop = 2
 set.shiftwidth = 2
 set.expandtab = true
+
+set.laststatus = 0
 
 set.list = false
 set.listchars = {
@@ -111,36 +112,50 @@ set.fillchars = {
 --   print(vim.inspect(line))
 -- end
 
+if vim.fn.exists('termguicolors') ~= 0 then  --incase of true
+  if vim.fn.exits('winblend') ~= 0 then  -- incase of true
+    vim.opt.termguicolors = true
+    vim.opt.winblend = 0
+    vim.opt.wildoptions = 'pum'
+    vim.opt.pumblend = 25
+  end
+end
+
+cmd [[ autocmd BufWritePre * %s/\s\+$//e ]]
+
 -- settings when switching modes
-cmd [[
+exec([[
   augroup highlight-when-switching-modes
   	autocmd!
   	autocmd InsertEnter * setlocal number norelativenumber nocursorline
   	autocmd InsertLeave * setlocal number relativenumber  " put "cursorline" here(if you want)
   augroup end
-]]
+]], true)
 
 -- periodically check for file changes
-cmd [[
+exec([[
   augroup checktime
     autocmd!
     autocmd CursorHold * silent! checktime
   augroup end
-]]
+]], true)
 
 -- resize splits when vim changes size
-cmd [[
+exec([[
   augroup auto-resize
     autocmd!
     autocmd VimResized * wincmd =
   augroup end
-]]
+]], true)
 
-cmd [[
+exec([[
   let @+=@"
   let @*=@""
-]]
+]], true)
 
-cmd [[
-  autocmd BufWritePre * %s/\s\+$//e
-]]
+exec([[
+  augroup highlight_yank
+    autocmd!
+    au TextYankPost * silent! lua vim.highlight.on_yank { higroup = 'IncSearch', timeout = 300 }
+  augroup end
+]], true)
