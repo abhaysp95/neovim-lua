@@ -20,6 +20,16 @@ return require('packer').startup(function(use)
   -- LSP
   use 'neovim/nvim-lspconfig'
 
+  -- LSP stuffs
+  use 'glepnir/lspsaga.nvim'
+  use 'onsails/lspkind-nvim'
+  use 'kosayoda/nvim-lightbulb'
+  use 'mfussenegger/nvim-jdtls'
+  use 'mfussenegger/nvim-dap'
+
+  use 'kevinhwang91/nvim-bqf'
+  use 'airblade/vim-rooter'
+
   -- autocomplete
   use {
     'hrsh7th/nvim-cmp',
@@ -32,6 +42,52 @@ return require('packer').startup(function(use)
     },
   }
 
+  -- treesitter (post-install/update hook with neovim command)
+  use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
+
+  -- icons
+  use 'kyazdani42/nvim-web-devicons'
+
+  -- colorschemes
+  use 'tanvirtin/monokai.nvim'
+  use 'ayu-theme/ayu-vim'
+  use 'romgrk/doom-one.vim'
+  use 'cocopon/iceberg.vim'
+  use 'whatyouhide/vim-gotham'
+  use 'srcery-colors/srcery-vim'
+  use 'sainnhe/gruvbox-material'
+  use 'jacoborus/tender.vim'
+  use 'jnurmine/Zenburn'
+  use 'sainnhe/edge'
+  use 'folke/tokyonight.nvim'
+  use 'arzg/vim-colors-xcode'
+	use 'norcalli/nvim-colorizer.lua'
+  use 'yunlingz/equinusocio-material.vim'
+  use 'ChristianChiarulli/nvcode-color-schemes.vim'
+  use { 'bluz71/vim-nightfly-guicolors', as = 'nightfly' }
+  use { 'rose-pine/neovim', as = 'rose-pine' }
+
+  -- statusline
+  use {
+    'famiu/feline.nvim',
+    requires = { 'kyazdani42/nvim-web-devicons' },
+  }
+
+  -- telescope
+  use {
+    'nvim-telescope/telescope.nvim',
+    requires = {
+      'nvim-lua/plenary.nvim',
+      'nvim-lua/popup.nvim'
+    }
+  }
+
+  -- telescope extension plugins
+  use 'nvim-telescope/telescope-media-files.nvim'
+
+  -- file explorer
+  use 'kyazdani42/nvim-tree.lua'
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then
@@ -41,7 +97,7 @@ return require('packer').startup(function(use)
   ------------------------------------------
   -- custom modules for installed plugins --
   ------------------------------------------
-  
+
   -- keybinds for installed plugins
   require('plugins.plugin_keybindings')
   require('plugins.nvim-cmp')
