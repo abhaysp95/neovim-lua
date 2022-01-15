@@ -73,12 +73,15 @@ vim.g.tokyonight_colors  = {}                             -- table (with key, va
 vim.g.tokyonight_day_brightness  = 0.3
 -- vim.g.tokyonight_lualine_bold  = false
 
+vim.cmd [[ colorscheme tokyonight ]]
+
 -- using background of terminal (generated from pywal)
-vim.cmd [[ au Colorscheme * hi Normal ctermbg=none guibg=none ]]
+-- vim.cmd [[ au Colorscheme * hi Normal ctermbg=none guibg=none ]]
+-- vim.cmd [[ hi Normal ctermbg=none guibg=none ]]
 
-vim.cmd [[ colorscheme  tokyonight ]]
-
-vim.cmd [[
+vim.api.nvim_exec([[
+  hi Normal ctermbg=none guibg=none
+  hi NormalNC ctermbg=none guibg=none
   hi LineNr guibg=background
   hi CursorLineNr guibg=background
   hi DiffAdd  guibg=background
@@ -89,4 +92,5 @@ vim.cmd [[
   hi SignifySignDelete guibg=background
   hi SignColumn guibg=background
   hi FoldColumn guibg=background
-]]
+]], true)
+

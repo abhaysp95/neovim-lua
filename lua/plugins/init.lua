@@ -42,11 +42,39 @@ return require('packer').startup(function(use)
     },
   }
 
+  -- autopairs
+  use 'windwp/nvim-autopairs'
+
+  -- surround
+  use 'blackCauldron7/surround.nvim'
+
+  -- align text
+  use 'godlygeek/tabular'
+
   -- treesitter (post-install/update hook with neovim command)
-  use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
+  use {
+    'nvim-treesitter/nvim-treesitter',
+    run = ':TSUpdate',
+    -- requires = { 'p00f/nvim-ts-rainbow' }
+  }
+
+  -- tagviewer
+  use 'liuchengxu/vista.vim'
+
+  -- indent line
+  use 'lukas-reineke/indent-blankline.nvim'
 
   -- icons
   use 'kyazdani42/nvim-web-devicons'
+
+  -- start-page
+  use {
+    'goolord/alpha-nvim',
+    requires = { 'kyazdani42/nvim-web-devicons' },
+    config = function ()
+      require'alpha'.setup(require'alpha.themes.dashboard'.opts)
+    end
+  }
 
   -- colorschemes
   use 'tanvirtin/monokai.nvim'
@@ -86,7 +114,19 @@ return require('packer').startup(function(use)
   use 'nvim-telescope/telescope-media-files.nvim'
 
   -- file explorer
-  use 'kyazdani42/nvim-tree.lua'
+  use {
+    'kyazdani42/nvim-tree.lua',
+    requires = { 'kyazdani42/nvim-web-devicons' },
+  }
+
+  -- git labels
+  use {
+    'lewis6991/gitsigns.nvim',
+    requires = { 'nvim-lua/plenary.nvim' },
+  }
+
+  -- floaterm
+  use 'voldikss/vim-floaterm'
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
@@ -99,7 +139,21 @@ return require('packer').startup(function(use)
   ------------------------------------------
 
   -- keybinds for installed plugins
-  require('plugins.plugin_keybindings')
   require('plugins.nvim-cmp')
-
+  require('plugins.colorizer')
+  require('plugins.nvim_tree')
+  -- require('plugins.feline')  -- not a big fan of statuslines
+  require('plugins.nvim-treesitter')
+  require('plugins.gitsigns')
+  require('plugins.nvim-autopairs')
+  require('plugins.surround')
+  require('plugins.nvim-treesitter')
+  require('plugins.telescope')
+  require('plugins.lspsaga')
+  require('plugins.alpha-nvim')
+  require('plugins.floaterm')
+  require('plugins.indent-blankline')
+  require('plugins.vista')
+  require('plugins.nvim-lightbulb')
+  require('plugins.plugin_keybindings')
 end)
