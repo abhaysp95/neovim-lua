@@ -132,8 +132,10 @@ nvim_lsp.sumneko_lua.setup {
       workspace = {
         -- Make the server aware of Neovim runtime files
         library = vim.api.nvim_get_runtime_file('', true),
-	maxPreload = 10000, -- Add this if missing or increase it
-	preloadFileSize = 10000, -- Add this if missing or increase it
+
+        -- below two line are fix (but takes too much resource)
+        -- maxPreload = 10000, -- Add this if missing or increase it
+        -- preloadFileSize = 10000, -- Add this if missing or increase it
       },
       -- Do not send telemetry data containing a randomized but unique identifier
       telemetry = {
