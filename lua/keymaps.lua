@@ -87,8 +87,8 @@ keybind('n', 'ccc', ':cclose<CR>', default_opts)
 keybind('n', 'cco', ':copen<CR>', default_opts)
 
 -- better indenting
-keybind('n', '<', '<gv', default_opts)
-keybind('n', '>', '>gv', default_opts)
+-- keybind('n', '<', '<gv', default_opts)
+-- keybind('n', '>', '>gv', default_opts)
 
 -- move selected line/bloc in visual mode
 keybind('x', 'K', [[:move '<-2<CR>gv-gv']], default_opts)
