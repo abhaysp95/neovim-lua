@@ -21,7 +21,7 @@ set.clipboard = { 'unnamed', 'unnamedplus' } -- copy/paste to system clipboard
 -- Autocompletion
 -----------------------------------------------------------
 -- insert mode completion options
-set.completeopt = { 'menuone', 'noinsert', 'noselect', 'longest', 'preview' }
+set.completeopt = { 'menuone', 'noinsert', 'noselect', 'longest' }
 
 
 set.tabstop = 2
@@ -90,8 +90,8 @@ set.wildmenu = true
 set.signcolumn = 'auto'
 set.path:append('**')
 
-set.formatoptions:remove('cro')
 set.formatoptions:append('n')
+set.formatoptions = set.formatoptions - 'cro'  -- still not working (:remove(..) too)
 
 set.foldenable = false
 set.foldlevel = 1
@@ -139,4 +139,8 @@ cmd [[
 cmd [[
   let @+=@"
   let @*=@""
+]]
+
+cmd [[
+  autocmd BufWritePre * %s/\s\+$//e
 ]]
