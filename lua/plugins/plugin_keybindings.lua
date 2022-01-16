@@ -81,4 +81,25 @@ vim.cmd("let g:floaterm_keymap_toggle = '<leader>tl'")
 keybind('n', '<Leader>tn', ':FloatermNew', default_opts)
 keybind('n', '<Leader>tl', ':FloatermToggle', default_opts)
 
+----------------
+-- kommentary --
+----------------
+
+-- extended mappings (default are the same)
+vim.api.nvim_set_keymap("n", "<leader>cic", "<Plug>kommentary_line_increase", {})
+vim.api.nvim_set_keymap("n", "<leader>ci", "<Plug>kommentary_motion_increase", {})
+vim.api.nvim_set_keymap("x", "<leader>ci", "<Plug>kommentary_visual_increase", {})
+vim.api.nvim_set_keymap("n", "<leader>cdc", "<Plug>kommentary_line_decrease", {})
+vim.api.nvim_set_keymap("n", "<leader>cd", "<Plug>kommentary_motion_decrease", {})
+vim.api.nvim_set_keymap("x", "<leader>cd", "<Plug>kommentary_visual_decrease", {})
+
+--[[ uncomment & change, when you want to use custom bindings (set in config
+lua/plugins/kommentary.lua) ]]
+--[[
+vim.api.nvim_set_keymap("n", "<leader>cc", "<Plug>kommentary_line_default", {})
+vim.api.nvim_set_keymap("n", "<leader>c", "<Plug>kommentary_motion_default", {})
+vim.api.nvim_set_keymap("x", "<leader>c", "<Plug>kommentary_visual_default", {})
+--]]
+
+
 -- NOTE: keybindings for lspconfig are in lsp/init.lua

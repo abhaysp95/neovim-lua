@@ -60,6 +60,9 @@ return require('packer').startup(function(use)
   -- surround
   use 'blackCauldron7/surround.nvim'
 
+  -- commentary
+  use 'b3nj5m1n/kommentary'
+
   -- align text
   use 'godlygeek/tabular'
 
@@ -159,6 +162,7 @@ return require('packer').startup(function(use)
   require('plugins.gitsigns')
   require('plugins.nvim-autopairs')
   require('plugins.surround')
+  require('plugins.kommentary')
   require('plugins.nvim-treesitter')
   require('plugins.telescope')
   require('plugins.lspsaga')
