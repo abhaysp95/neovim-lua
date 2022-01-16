@@ -8,9 +8,12 @@
 --                ▀                      ▀▀
 --  => lua/plugins/lspsaga.lua
 
-local saga = require'lspsaga'
+local status_ok, lspsaga_config = pcall(require, "lspsaga")
+if not status_ok then
+  return
+end
 
-saga.init_lsp_saga {
+lspsaga_config.init_lsp_saga {
 	error_sign = '',
 	warn_sign = '',
 	hint_sign = '',

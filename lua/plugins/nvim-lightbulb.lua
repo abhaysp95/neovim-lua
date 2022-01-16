@@ -9,11 +9,16 @@
 --  => lua/plugins/nvim-lightbulb.lua
 
 
+local status_ok, config = pcall(require, 'nvim-lightbulb')
+if not status_ok then
+  return
+end
+
 -- Showing defaults
-require'nvim-lightbulb'.update_lightbulb {
+config.update_lightbulb {
     -- LSP client names to ignore
     -- Example: {"sumneko_lua", "null-ls"}
-    ignore = {},
+    ignore = { "bashls", "null-ls" },
     sign = {
         enabled = true,
         -- Priority of the gutter sign

@@ -155,12 +155,12 @@ exec([[
 ]], true)
 
 -- periodically check for file changes
-exec([[
-  augroup checktime
-    autocmd!
-    autocmd CursorHold * silent! checktime
-  augroup end
-]], true)
+-- exec([[
+--   augroup checktime
+--     autocmd!
+--     autocmd CursorHold * silent! checktime
+--   augroup end
+-- ]], true)
 
 -- resize splits when vim changes size
 exec([[

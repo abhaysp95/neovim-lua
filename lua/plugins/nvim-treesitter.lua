@@ -9,36 +9,39 @@
 --  => lua/plugins/nvim-treesitter.lua
 
 
--- if vim.api.nvim_get_vvar('loaded_nvim_treesitter') == nil then
---   print("Treesitter not loaded")
---   return
--- end
+local status_ok, tsconfigs = pcall(require, "nvim-treesitter.configs")
+if not status_ok then
+  return
+end
 
-require'nvim-treesitter.configs'.setup {
+tsconfigs.setup {
 	highlight = {
 		enable = true,
 		disable = {},
+    additional_vim_regex_highlighting = true,
 	},
 	indent = {
 		enable = false,
-		disable = {},
+		disable = { "yaml", "yml" },
 	},
-	ensure_installed = {
-		"bash",
-		"c",
-		"cpp",
-		"go",
-		"haskell",
-		"html",
-		"java",
-		"javascript",
-		"json",
-		"lua",
-		"python",
-		"rust",
-		"ruby",
-		"typescript"
-	},
+  ensure_installed = "maintained",
+	-- ensure_installed = {
+	-- 	"bash",
+	-- 	"c",
+	-- 	"cpp",
+	-- 	"go",
+	-- 	"haskell",
+	-- 	"html",
+	-- 	"java",
+	-- 	"javascript",
+	-- 	"json",
+	-- 	"lua",
+	-- 	"python",
+	-- 	"rust",
+	-- 	"ruby",
+	-- 	"typescript"
+	-- },
+  ignore_instal = {},  -- ignore parsers
 	incremental_selection = {
 		enable = true,
 		keymap = {
@@ -50,9 +53,9 @@ require'nvim-treesitter.configs'.setup {
 	},
 	-- nvim-ts-rainbow
 	-- rainbow = {
-	-- 	enable = true,
-	-- 	extended_mode = true,
-	-- 	max_file_lines = nil,
+	-- enable = true,
+	-- extended_mode = true,
+	-- max_file_lines = nil,
 	-- 	colors = {
   --     -- rose-pine
   --     '#111019',
@@ -75,4 +78,4 @@ vim.api.nvim_exec([[
 	set foldexpr=nvim_treesitter#foldexpr()
 	]], true)
 
-local parser_config = require"nvim-treesitter.parsers".get_parser_configs()
+-- local parser_config = require"nvim-treesitter.parsers".get_parser_configs()
