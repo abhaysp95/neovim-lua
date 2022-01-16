@@ -1,5 +1,17 @@
-require ('plugins')
+--
+--   ▀             ▀      ▄
+-- ▄▄▄    ▄ ▄▄   ▄▄▄    ▄▄█▄▄
+--   █    █▀  █    █      █
+--   █    █   █    █      █
+-- ▄▄█▄▄  █   █  ▄▄█▄▄    ▀▄▄
+--
+--
+-- => https://github.com/coolabhays/neovim-lua.git
+
+-- order is not supposed to be arbitrary
+
 require ('keymaps')
-require ('settings')
 require ('lsp')
 require ('colors')
+require ('plugins')
+require ('settings')
