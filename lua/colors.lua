@@ -1,3 +1,12 @@
+--
+--                ▀▀█
+--   ▄▄▄    ▄▄▄     █     ▄▄▄    ▄ ▄▄   ▄▄▄
+--  █▀  ▀  █▀ ▀█    █    █▀ ▀█   █▀  ▀ █   ▀
+--  █      █   █    █    █   █   █      ▀▀▀▄
+--  ▀█▄▄▀  ▀█▄█▀    ▀▄▄  ▀█▄█▀   █     ▀▄▄▄▀
+--
+--  => lua/colors.lua
+
 vim.cmd [[
   if exists('+termguicolors')
     let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
@@ -43,7 +52,7 @@ vim.g.tender_italics = 1
 vim.g.tender_bold = 1
 
 -- chuling/equinusocio_material
-vim.g.equinusocio_material_style = 'darker'
+vim.g.equinusocio_material_style = 'pure'
 vim.g.equinusocio_material_less = 50
 vim.g.equinusocio_material_hide_vertsplit = 1
 vim.g.equinusocio_material_bracket_improved = 0
@@ -79,9 +88,19 @@ vim.cmd [[ colorscheme tokyonight ]]
 -- vim.cmd [[ au Colorscheme * hi Normal ctermbg=none guibg=none ]]
 -- vim.cmd [[ hi Normal ctermbg=none guibg=none ]]
 
+
+-- no background setttings
 vim.api.nvim_exec([[
   hi Normal ctermbg=none guibg=none
+  hi NormalFloat ctermbg=none guibg=none
   hi NormalNC ctermbg=none guibg=none
+  " hi TelescopeNormal ctermbg=none guibg=none
+  " hi TelescopeBorder ctermbg=none guibg=none
+  " hi NvimTreeNormal ctermbg=none guibg=none
+  " hi NvimTreeNormalNC ctermbg=none guibg=none
+]], true)
+
+vim.api.nvim_exec([[
   hi LineNr guibg=background
   hi CursorLineNr guibg=background
   hi DiffAdd  guibg=background

@@ -9,3 +9,8 @@ require'telescope'.setup {
 		},
 	},
 }
+
+vim.api.nvim_exec([[
+  hi TelescopeNormal ctermbg=none guibg=none
+  hi TelescopeBorder ctermbg=none guibg=none
+]], true)

@@ -1,3 +1,16 @@
+--
+--
+--         ▀▀█                    ▀                  █        ▀               █    ▀
+--  ▄▄▄▄     █    ▄   ▄   ▄▄▄▄  ▄▄▄    ▄ ▄▄          █▄▄▄   ▄▄▄    ▄ ▄▄    ▄▄▄█  ▄▄▄    ▄ ▄▄    ▄▄▄▄   ▄▄▄
+--  █▀ ▀█    █    █   █  █▀ ▀█    █    █▀  █         █▀ ▀█    █    █▀  █  █▀ ▀█    █    █▀  █  █▀ ▀█  █   ▀
+--  █   █    █    █   █  █   █    █    █   █   ▀▀▀   █   █    █    █   █  █   █    █    █   █  █   █   ▀▀▀▄
+--  ██▄█▀    ▀▄▄  ▀▄▄▀█  ▀█▄▀█  ▄▄█▄▄  █   █         ██▄█▀  ▄▄█▄▄  █   █  ▀█▄██  ▄▄█▄▄  █   █  ▀█▄▀█  ▀▄▄▄▀
+--  █                     ▄  █                                                                  ▄  █
+--  ▀                      ▀▀                                                                    ▀▀
+--
+--  => lua/plugins/plugin_keybindings.lua
+
+
 -- NOTE: <Leader> is behaving for <Localleader>, figure out the issue
 
 local default_opts = { noremap = true, silent = true }

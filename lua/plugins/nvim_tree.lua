@@ -1,3 +1,12 @@
+--
+--                  ▀                    ▄
+--  ▄ ▄▄   ▄   ▄  ▄▄▄    ▄▄▄▄▄         ▄▄█▄▄   ▄ ▄▄   ▄▄▄    ▄▄▄
+--  █▀  █  ▀▄ ▄▀    █    █ █ █           █     █▀  ▀ █▀  █  █▀  █
+--  █   █   █▄█     █    █ █ █   ▀▀▀     █     █     █▀▀▀▀  █▀▀▀▀
+--  █   █    █    ▄▄█▄▄  █ █ █           ▀▄▄   █     ▀█▄▄▀  ▀█▄▄▀
+--
+--  => lua/plugins/nvim_tree.lua
+
 vim.g.nvim_tree_quit_on_open = 1
 vim.g.nvim_tree_indent_markers = 1
 vim.g.nvim_tree_git_hl = 1
@@ -26,6 +35,7 @@ vim.g.nvim_tree_icons = {
 require('nvim-tree').setup {
   open_on_setup = false,
   update_cwd = true,
+  auto_close = true,  -- I'll update this after testing
   filters = {
     dotfiles = true,
     custom = { '.git', 'node_modules', '.cache', '.bin' },
@@ -40,4 +50,8 @@ require('nvim-tree').setup {
   },
 }
 
-vim.cmd[[ highlight NvimTreeFolderIcon guibg=green ]]
+
+vim.api.nvim_exec([[
+  hi NvimTreeNormal ctermbg=none guibg=none
+  hi NvimTreeNormalNC ctermbg=none guibg=none
+]], true)

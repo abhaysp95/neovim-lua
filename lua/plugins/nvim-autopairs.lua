@@ -1,3 +1,14 @@
+--
+--                  ▀                                  ▄                          ▀
+--  ▄ ▄▄   ▄   ▄  ▄▄▄    ▄▄▄▄▄          ▄▄▄   ▄   ▄  ▄▄█▄▄   ▄▄▄   ▄▄▄▄    ▄▄▄  ▄▄▄     ▄ ▄▄   ▄▄▄
+--  █▀  █  ▀▄ ▄▀    █    █ █ █         ▀   █  █   █    █    █▀ ▀█  █▀ ▀█  ▀   █   █     █▀  ▀ █   ▀
+--  █   █   █▄█     █    █ █ █   ▀▀▀   ▄▀▀▀█  █   █    █    █   █  █   █  ▄▀▀▀█   █     █      ▀▀▀▄
+--  █   █    █    ▄▄█▄▄  █ █ █         ▀▄▄▀█  ▀▄▄▀█    ▀▄▄  ▀█▄█▀  ██▄█▀  ▀▄▄▀█ ▄▄█▄▄   █     ▀▄▄▄▀
+--                                                                 █
+--                                                                 ▀
+--  => lua/plugins/nvim-autopairs.lua
+
+
 require('nvim-autopairs').setup({
   enable_check_bracket_line = false,
   disable_filetype = { "TelescopePrompt" },

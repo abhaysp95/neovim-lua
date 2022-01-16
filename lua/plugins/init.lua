@@ -1,3 +1,15 @@
+--
+--         ▀▀█                    ▀
+--  ▄▄▄▄     █    ▄   ▄   ▄▄▄▄  ▄▄▄    ▄ ▄▄    ▄▄▄
+--  █▀ ▀█    █    █   █  █▀ ▀█    █    █▀  █  █   ▀
+--  █   █    █    █   █  █   █    █    █   █   ▀▀▀▄
+--  ██▄█▀    ▀▄▄  ▀▄▄▀█  ▀█▄▀█  ▄▄█▄▄  █   █  ▀▄▄▄▀
+--  █                     ▄  █
+--  ▀                      ▀▀
+--
+--
+--  => lua/plugins/init.lua
+
 -- This file can be loaded by calling `lua require('plugins')` from your init.vim
 
 local fn = vim.fn

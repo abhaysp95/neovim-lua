@@ -1,3 +1,14 @@
+--
+--
+--                  ▄      ▄      ▀
+--   ▄▄▄    ▄▄▄   ▄▄█▄▄  ▄▄█▄▄  ▄▄▄    ▄ ▄▄    ▄▄▄▄   ▄▄▄
+--  █   ▀  █▀  █    █      █      █    █▀  █  █▀ ▀█  █   ▀
+--   ▀▀▀▄  █▀▀▀▀    █      █      █    █   █  █   █   ▀▀▀▄
+--  ▀▄▄▄▀  ▀█▄▄▀    ▀▄▄    ▀▄▄  ▄▄█▄▄  █   █  ▀█▄▀█  ▀▄▄▄▀
+--                                             ▄  █
+--                                              ▀▀
+--  => lua/settings.lua
+
 -----------------------------------------------------------
 -- Neovim settings
 -----------------------------------------------------------
@@ -13,6 +24,8 @@ local exec = vim.api.nvim_exec
 local fn = vim.fn
 -- local g = vim.g
 local set = vim.opt
+
+set.compatible = false
 
 -- general
 set.clipboard = { 'unnamed', 'unnamedplus' } -- copy/paste to system clipboard
@@ -30,6 +43,7 @@ set.expandtab = true
 
 set.laststatus = 0
 
+-- list chars settings (:h listchars)
 set.list = false
 set.listchars = {
   tab = '│·',
@@ -91,8 +105,11 @@ set.wildmenu = true
 set.signcolumn = 'auto'
 set.path:append('**')
 
-set.formatoptions:append('n')
-set.formatoptions = set.formatoptions - 'cro'  -- still not working (:remove(..) too)
+-- apparently $VIMRUNTIME files update this option (and I'm not in mood to put
+-- the directory in my setup for this). Just use keybinding to enable and
+-- disable (see keymaps.lua)
+set.formatoptions:append( 'n' )  -- this is working (below isn't)
+set.formatoptions:remove({ 'c', 'r', 'o' })
 
 set.foldenable = false
 set.foldlevel = 1
@@ -100,6 +117,7 @@ set.foldlevelstart = 1
 set.foldnestmax = 3
 set.foldmethod = 'indent'
 
+-- useful in folding
 set.fillchars = {
   vert = '┃',
   fold = '∙',
@@ -121,7 +139,11 @@ if vim.fn.exists('termguicolors') ~= 0 then  --incase of true
   end
 end
 
-cmd [[ autocmd BufWritePre * %s/\s\+$//e ]]
+-- fed up with autocomment
+-- cmd[[]]
+
+-- remove whitespaces when file is saved
+cmd[[ autocmd BufWritePre * %s/\s\+$//e ]]
 
 -- settings when switching modes
 exec([[
@@ -153,6 +175,7 @@ exec([[
   let @*=@""
 ]], true)
 
+-- highlight when text/block is yanked
 exec([[
   augroup highlight_yank
     autocmd!

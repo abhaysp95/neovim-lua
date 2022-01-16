@@ -1,3 +1,14 @@
+--
+--                  ▀                  ▀▀█      ▀           █        ▄    █             ▀▀█    █
+--  ▄ ▄▄   ▄   ▄  ▄▄▄    ▄▄▄▄▄           █    ▄▄▄     ▄▄▄▄  █ ▄▄   ▄▄█▄▄  █▄▄▄   ▄   ▄    █    █▄▄▄
+--  █▀  █  ▀▄ ▄▀    █    █ █ █           █      █    █▀ ▀█  █▀  █    █    █▀ ▀█  █   █    █    █▀ ▀█
+--  █   █   █▄█     █    █ █ █   ▀▀▀     █      █    █   █  █   █    █    █   █  █   █    █    █   █
+--  █   █    █    ▄▄█▄▄  █ █ █           ▀▄▄  ▄▄█▄▄  ▀█▄▀█  █   █    ▀▄▄  ██▄█▀  ▀▄▄▀█    ▀▄▄  ██▄█▀
+--                                                    ▄  █
+--                                                     ▀▀
+--  => lua/plugins/nvim-lightbulb.lua
+
+
 -- Showing defaults
 require'nvim-lightbulb'.update_lightbulb {
     -- LSP client names to ignore

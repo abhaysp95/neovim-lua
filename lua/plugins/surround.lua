@@ -1,5 +1,13 @@
--- https://github.com/blackCauldron7/surround.nvim
 --
+--                                                       █
+--   ▄▄▄   ▄   ▄   ▄ ▄▄   ▄ ▄▄   ▄▄▄   ▄   ▄  ▄ ▄▄    ▄▄▄█
+--  █   ▀  █   █   █▀  ▀  █▀  ▀ █▀ ▀█  █   █  █▀  █  █▀ ▀█
+--   ▀▀▀▄  █   █   █      █     █   █  █   █  █   █  █   █
+--  ▀▄▄▄▀  ▀▄▄▀█   █      █     ▀█▄█▀  ▀▄▄▀█  █   █  ▀█▄██
+--
+--
+--  => lua/plugins/surround.lua
+
 require"surround".setup {
   context_offset = 100,
   load_autogroups = false,

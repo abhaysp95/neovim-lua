@@ -1,3 +1,13 @@
+--
+--  █
+--  █   ▄   ▄▄▄   ▄   ▄  ▄▄▄▄▄   ▄▄▄   ▄▄▄▄    ▄▄▄
+--  █ ▄▀   █▀  █  ▀▄ ▄▀  █ █ █  ▀   █  █▀ ▀█  █   ▀
+--  █▀█    █▀▀▀▀   █▄█   █ █ █  ▄▀▀▀█  █   █   ▀▀▀▄
+--  █  ▀▄  ▀█▄▄▀   ▀█    █ █ █  ▀▄▄▀█  ██▄█▀  ▀▄▄▄▀
+--                 ▄▀                  █
+--
+--  => lua/keymaps.lua
+
 local term_opts = { silent = true }
 local expr_opts = { expr = true }
 local default_opts = { noremap = true, silent = true }
