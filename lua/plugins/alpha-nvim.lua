@@ -1,9 +1,17 @@
+--
+--         ▀▀█           █                                    ▀
+--   ▄▄▄     █    ▄▄▄▄   █ ▄▄    ▄▄▄          ▄ ▄▄   ▄   ▄  ▄▄▄    ▄▄▄▄▄
+--  ▀   █    █    █▀ ▀█  █▀  █  ▀   █         █▀  █  ▀▄ ▄▀    █    █ █ █
+--  ▄▀▀▀█    █    █   █  █   █  ▄▀▀▀█   ▀▀▀   █   █   █▄█     █    █ █ █
+--  ▀▄▄▀█    ▀▄▄  ██▄█▀  █   █  ▀▄▄▀█         █   █    █    ▄▄█▄▄  █ █ █
+--                █
+--                ▀
+--  => lua/plugins/alpha-nvim.lua
+
+
 -----------------------------------------------------------
 -- Dashboard configuration file
 -----------------------------------------------------------
-
--- Plugin: alpha-nvim
--- https://github.com/goolord/alpha-nvim
 
 
 local alpha = require 'alpha'
@@ -12,7 +20,7 @@ local dashboard = require 'alpha.themes.dashboard'
 -- setup footer
 local function footer()
   local datetime = os.date('%Y/%m/%d %H:%M:%S')
-  return datetime
+  return 'こんいちは ' .. datetime
 end
 
 
@@ -24,20 +32,8 @@ dashboard.section.header.val = {
  " █     ▀▄▄▀█   ▀█      ▀▄▄   █     ▀▄▄▀█  ▀█▄▄▀  ▀█▄▄▀   █     ",
  "               ▄▀                                              ",
  "              ▀▀                                               ",
- "                      レイトレーサー                           "
+ "                        レイトレーサー                         "
 }
-
--- header
--- dashboard.section.header.val = {
---   "                                                    ",
---   " ███╗   ██╗███████╗ ██████╗ ██╗   ██╗██╗███╗   ███╗ ",
---   " ████╗  ██║██╔════╝██╔═══██╗██║   ██║██║████╗ ████║ ",
---   " ██╔██╗ ██║█████╗  ██║   ██║██║   ██║██║██╔████╔██║ ",
---   " ██║╚██╗██║██╔══╝  ██║   ██║╚██╗ ██╔╝██║██║╚██╔╝██║ ",
---   " ██║ ╚████║███████╗╚██████╔╝ ╚████╔╝ ██║██║ ╚═╝ ██║ ",
---   " ╚═╝  ╚═══╝╚══════╝ ╚═════╝   ╚═══╝  ╚═╝╚═╝     ╚═╝ ",
---   "                                                    ",
--- }
 
 -- menu
 dashboard.section.buttons.val = {
