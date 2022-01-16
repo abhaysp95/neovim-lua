@@ -80,23 +80,26 @@ https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.m
 Bash --> bashls
 https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#bashls
 
-Python --> pyright
-https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#pyright
-
-C-C++ -->  clangd
-https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#clangd
-
-HTML/CSS/JSON --> vscode-html-languageserver
-https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#html
-
-JavaScript/TypeScript --> tsserver
-https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#tsserver
-
 --]]
 
 -- Use a loop to conveniently call 'setup' on multiple servers and
 -- map buffer local keybindings when the language server attaches
-local servers = { 'bashls', 'clangd', 'cmake', 'cssls', 'html', 'gopls', 'pyright', 'rust_analyzer', 'tsserver' }
+local servers = { 'bashls', 'clangd', 'cmake', 'cssls', 'emmet_ls', 'gopls', 'html', 'pyright', 'rust_analyzer', 'tsserver' }
+
+--[[
+-- Installation(ls):
+-- bashls:            pacman -S bash-language-server (check your distro or lspconfig github)
+-- emmet-ls:          npm install -g emmet-ls
+-- clangd:            pacman -S clang
+-- cmake:             pip install --user cmake-language-server
+-- cssls:             npm i -g vscode-langservers-extracted
+-- gopls:             go install golang.org/x/tools/gopls@latest (should not need to do, if you install go, but just in case)
+-- html:              npm i -g vscode-langservers-extracted
+-- pyright:           pip install --user pyright
+-- rust-analyzer:     pacman -S rust-analyzer (or check https://rust-analyzer.github.io/manual.html#installation)
+-- sumneko_lua:       https://github.com/sumneko/lua-language-server/wiki/Build-and-Run
+-- tsserver:          npm install -g typescript typescript-language-server
+-- --]]
 
 -- Set settings for language servers below
 --
