@@ -15,7 +15,12 @@
 -----------------------------------------------------------
 
 
-require('indent_blankline').setup {
+local status_ok, config = pcall(require, "indent_blankline")
+if not status_ok then
+  return
+end
+
+config.setup {
   char = "│",
   show_first_indent_level = false,
   filetype_exclude = {

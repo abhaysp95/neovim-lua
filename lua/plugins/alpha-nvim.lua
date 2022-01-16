@@ -14,7 +14,13 @@
 -----------------------------------------------------------
 
 
-local alpha = require 'alpha'
+-- local alpha = require 'alpha'
+
+local status_ok, alpha_config = pcall(require, "alpha")
+if not status_ok then
+  return
+end
+
 local dashboard = require 'alpha.themes.dashboard'
 
 -- setup footer
@@ -46,5 +52,5 @@ dashboard.section.buttons.val = {
 
 dashboard.section.footer.val = footer()
 
-require('alpha').setup { dashboard.opts }
+alpha_config.setup { dashboard.opts }
 

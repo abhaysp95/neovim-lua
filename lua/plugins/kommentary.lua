@@ -8,15 +8,19 @@
 --                                                                 ▀▀
 --  => lua/plugins/kommentary.lua
 
-local config = require('kommentary.config')
 
-config.configure_language("default", {
+local status_ok, kommentary_config = pcall(require, "kommentary.config")
+if not status_ok then
+  return
+end
+
+kommentary_config.configure_language("default", {
     prefer_single_line_comments = false,
     use_consistent_indentation = true,
     ignore_whitespace = true
 })
 
-config.use_extended_mappings()
+kommentary_config.use_extended_mappings()
 
 -- vim.g.kommentary_create_default_mappings = true  -- change it if you want to use custom bindings
 

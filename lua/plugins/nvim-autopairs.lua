@@ -9,7 +9,12 @@
 --  => lua/plugins/nvim-autopairs.lua
 
 
-require('nvim-autopairs').setup({
+local status_ok, autopairs_config = pcall(require, "nvim-autopairs")
+if not status_ok then
+  return
+end
+
+autopairs_config.setup({
   enable_check_bracket_line = false,
   disable_filetype = { "TelescopePrompt" },
 })

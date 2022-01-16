@@ -8,7 +8,13 @@
 --    ▀▀                                 ▀▀
 --  => lua/plugins/gitsigns.lua
 
-require('gitsigns').setup {
+
+local status_ok, gitsigns_config = pcall(require, "gitsigns")
+if not status_ok then
+  return
+end
+
+gitsigns_config.setup {
   signs = {
     add          = {hl = 'GitSignsAdd'   , text = '│', numhl='GitSignsAddNr'   , linehl='GitSignsAddLn'},
     change       = {hl = 'GitSignsChange', text = '│', numhl='GitSignsChangeNr', linehl='GitSignsChangeLn'},

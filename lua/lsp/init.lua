@@ -15,7 +15,12 @@
 -- Plugin: nvim-lspconfig
 -- for language server setup see: https://github.com/neovim/nvim-lspconfig
 
-local nvim_lsp = require 'lspconfig'
+
+-- local nvim_lsp = require 'lspconfig'
+local status_ok, nvim_lsp = pcall(require, "lspconfig")
+if not status_ok then
+  return
+end
 
 -- Add additional capabilities supported by nvim-cmp
 local capabilities = vim.lsp.protocol.make_client_capabilities()
@@ -84,7 +89,7 @@ https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.m
 
 -- Use a loop to conveniently call 'setup' on multiple servers and
 -- map buffer local keybindings when the language server attaches
-local servers = { 'bashls', 'clangd', 'cmake', 'cssls', 'emmet_ls', 'gopls', 'html', 'pyright', 'rust_analyzer', 'tsserver' }
+local servers = { 'clangd', 'cmake', 'cssls', 'emmet_ls', 'gopls', 'html', 'pyright', 'rust_analyzer', 'tsserver' }
 
 --[[
 -- Installation(ls):

@@ -16,8 +16,11 @@
 -- https://github.com/hrsh7th/nvim-cmpa
 
 
-local cmp = require 'cmp'
-local luasnip = require 'luasnip'
+local status1_ok, cmp = pcall(require, 'cmp')
+local status2_ok, luasnip = pcall(require, 'luasnip')
+if not status1_ok or not status2_ok then
+  return
+end
 
 cmp.setup {
   -- load snippet support
