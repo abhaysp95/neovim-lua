@@ -1,10 +1,20 @@
+--
+--  ▀▀█                         ▀▀█
+--    █    ▄   ▄   ▄▄▄            █     ▄▄▄
+--    █    █   █  ▀   █           █    █   ▀
+--    █    █   █  ▄▀▀▀█   ▀▀▀     █     ▀▀▀▄
+--    ▀▄▄  ▀▄▄▀█  ▀▄▄▀█           ▀▄▄  ▀▄▄▄▀
+--
+--
+--  => lua/lsp/lua-ls.lua
+
 -- https://github.com/sumneko/lua-language-server/wiki/Build-and-Run-(Standalone)
 
 -- USER = vim.fn.expand('$USER')
--- 
+--
 -- local sumneko_root_path = ""
 -- local sumneko_binary = ""
--- 
+--
 -- if vim.fn.has("mac") == 1 then
 --     sumneko_root_path = "/Users/" .. USER .. "/.config/nvim/language-servers/lua-language-server"
 --     sumneko_binary = "/Users/" .. USER .. "/.config/nvim/language-servers/lua-language-server/bin/lua-language-server"
