@@ -18,7 +18,22 @@ if fn.empty(fn.glob(install_path)) > 0 then
   packer_bootstrap = fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
 end
 
-return require('packer').startup(function(use)
+local status_ok, packer_config = pcall(require, 'packer')
+if not status_ok then
+  return
+end
+
+-- have packer use a popup window
+--[[ packer_config.init {
+  display = {
+    open_fn = function()
+      return require('packer.util').float{ border = "rounded" }
+    end,
+  },
+}
+--]]
+
+packer_config.startup(function(use)
   ---------------------
   -- My plugins here --
   ---------------------
@@ -30,7 +45,13 @@ return require('packer').startup(function(use)
   use 'christoomey/vim-tmux-navigator'
 
   -- LSP
-  use 'neovim/nvim-lspconfig'
+  use {
+    'neovim/nvim-lspconfig',
+    -- check if it's worth to put up filetypes like this
+    -- ft = { 'sh', 'zsh', 'fish', 'c', 'cpp', 'cmake', 'go',
+    --   'html', 'scss', 'css', 'javascript', 'javascriptreact',
+    --   'lua', 'python', 'rust', 'typescript', 'typescriptreact' }
+  }
 
   -- LSP stuffs
   use 'glepnir/lspsaga.nvim'
@@ -146,7 +167,7 @@ return require('packer').startup(function(use)
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then
-    require('packer').sync()
+    packer_config.sync()
   end
 
   ------------------------------------------
@@ -172,4 +193,5 @@ return require('packer').startup(function(use)
   require('plugins.vista')
   require('plugins.nvim-lightbulb')
   require('plugins.plugin_keybindings')
+
 end)
