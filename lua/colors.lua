@@ -94,10 +94,6 @@ vim.api.nvim_exec([[
   hi Normal ctermbg=none guibg=none
   hi NormalFloat ctermbg=none guibg=none
   hi NormalNC ctermbg=none guibg=none
-  " hi TelescopeNormal ctermbg=none guibg=none
-  " hi TelescopeBorder ctermbg=none guibg=none
-  " hi NvimTreeNormal ctermbg=none guibg=none
-  " hi NvimTreeNormalNC ctermbg=none guibg=none
 ]], true)
 
 vim.api.nvim_exec([[
