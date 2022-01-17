@@ -43,13 +43,15 @@ Like `sumneko-lua` and `jdtls` require such configuration.
 
 You can find all the installed in `lua/plugins/init.lua`. I'm mentioning some important ones.
 
-### LSP & Completion
+### LSP
 
 * neovim/nvim-lspconfig
 * glepnir/lspsaga.nvim
 * onsails/lspkind-nvim
 * kosayoda/nvim-lightbulb'
 * mfussenegger/nvim-jdtls
+
+### Completion
 
 * hrsh7th/nvim-cmp
 * hrsh7th/cmp-nvim-lsp
