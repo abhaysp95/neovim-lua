@@ -169,7 +169,7 @@ packer_config.startup(function(use)
   -- floaterm
   use 'voldikss/vim-floaterm'
 
-  -- emmet-vim (currently only vimscript plugin)
+  -- emmet-vim
   -- the plugin can be removed depending on how emmet-ls is working and
   -- how often I write html in markdown
   use {
