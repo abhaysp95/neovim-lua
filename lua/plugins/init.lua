@@ -169,6 +169,15 @@ packer_config.startup(function(use)
   -- floaterm
   use 'voldikss/vim-floaterm'
 
+  -- emmet-vim (currently only vimscript plugin)
+  -- the plugin can be removed depending on how emmet-ls is working and
+  -- how often I write html in markdown
+  use {
+    'mattn/emmet-vim',
+    opt = true,
+    ft = { 'html', 'css', 'markdown' }  -- can be updated later
+  }
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then
