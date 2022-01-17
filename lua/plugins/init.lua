@@ -23,8 +23,6 @@ if fn.empty(fn.glob(install_path)) > 0 then
   vim.cmd [[packadd packer.nvim]]
 end
 
-print "reached here"
-
 local status_ok, packer_config = pcall(require, 'packer')
 if not status_ok then
   return
