@@ -7,7 +7,7 @@
 --
 --  => lua/plugins/nvim_tree.lua
 
-vim.g.nvim_tree_quit_on_open = 1
+vim.g.nvim_tree_quit_on_open = 0
 vim.g.nvim_tree_indent_markers = 1
 vim.g.nvim_tree_git_hl = 1
 vim.g.nvim_tree_highlight_opened_files = 1
@@ -49,9 +49,3 @@ require('nvim-tree').setup {
     auto_resize = true
   },
 }
-
-
-vim.api.nvim_exec([[
-  hi NvimTreeNormal ctermbg=none guibg=none
-  hi NvimTreeNormalNC ctermbg=none guibg=none
-]], true)
