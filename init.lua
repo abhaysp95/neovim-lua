@@ -12,6 +12,6 @@
 
 require ('keymaps')
 require ('lsp')
-require ('colors')
 require ('plugins')
+require ('colors')
 require ('settings')
