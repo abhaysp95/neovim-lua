@@ -43,7 +43,8 @@ keybind('n', '<Leader>ts', [[:lua require('telescope.builtin').grep_string({ sea
 keybind('n', '<Leader>tg', [[:lua require('telescope.builtin').git_files()<CR>]], default_opts)
 keybind('n', '<Leader>tf', [[:lua require('telescope.builtin').find_files()<CR>]], default_opts)
 keybind('n', '<Leader>tg', [[:lua require('telescope.builtin').git_files()<CR>]], default_opts)
-keybind('n', '<Leader>tr', [[:lua require('telescope.builtin').live_grep()<CR>]], default_opts)
+keybind('n', '<Leader>tl', [[:lua require('telescope.builtin').live_grep()<CR>]], default_opts)
+keybind('n', '<Leader>tl', [[:lua require('telescope.builtin').resume()<CR>]], default_opts)
 keybind('n', '<Leader>tw', [[:lua require('telescope.builtin').grep_string { search = vim.fn.expand("<cword>") }<CR>]], default_opts)
 keybind('n', '<Leader>tb', [[:lua require('telescope.builtin').buffers()<CR>]], default_opts)
 keybind('n', '<Leader>th', [[:lua require('telescope.builtin').help_tags()<CR>]], default_opts)
@@ -51,13 +52,12 @@ keybind('n', '<Leader>tc', [[:lua require('telescope.builtin').colorscheme()<CR>
 keybind('n', '<Leader>trc', [[:lua require('telescope.builtin').search_dotfiles()<CR>]], default_opts)
 keybind('n', '<Leader>tG', [[:lua require('telescope.builtin').git_branches()<CR>]], default_opts)
 
-
 -------------
 -- lspsaga --
 -------------
 keybind('n' , '<Leader>gJ' , ':Lspsaga diagnostic_jump_next<CR>', default_opts)
 keybind('n' , 'K'          , ':Lspsaga hover_doc<CR>', default_opts)
-keybind('i' , 'gk'         , ':Lspsaga signature_help<CR>', default_opts)
+keybind('i' , '<Leader>gk'         , ':Lspsaga signature_help<CR>', default_opts)
 keybind('n' , '<Leader>gh' , ':Lspsaga lsp_finder<CR>', default_opts)
 keybind('n' , '<Leader>ga' , ':Lspsaga code_action<CR>', default_opts)
 keybind('v' , '<Leader>ga' , ':<C-U>Lspsaga range_code_action<CR>', default_opts)
