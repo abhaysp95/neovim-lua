@@ -24,6 +24,12 @@ tsconfigs.setup {
 		enable = false,
 		disable = { "yaml", "yml" },
 	},
+  autotag = {
+    enable = true,
+  },
+  autopairs = {
+    enable = true,
+  },
   ensure_installed = "maintained",
 	-- ensure_installed = {
 	-- 	"bash",
@@ -53,9 +59,9 @@ tsconfigs.setup {
 	},
 	-- nvim-ts-rainbow
 	-- rainbow = {
-	-- enable = true,
-	-- extended_mode = true,
-	-- max_file_lines = nil,
+  --   enable = true,
+  --   extended_mode = true,
+  --   max_file_lines = nil,
 	-- 	colors = {
   --     -- rose-pine
   --     '#111019',
