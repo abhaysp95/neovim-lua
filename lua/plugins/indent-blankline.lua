@@ -22,7 +22,8 @@ end
 
 config.setup {
   char = "│",
-  show_first_indent_level = false,
+  show_first_indent_level = true,
+  show_current_context = true,
   filetype_exclude = {
     'help',
     'git',
@@ -30,7 +31,9 @@ config.setup {
     'text',
     'terminal',
     'lspinfo',
-    'packer'
+    'packer',
+    'NvimTree',
+    'dashboard'
   },
   buftype_exclude = {
     'terminal',
