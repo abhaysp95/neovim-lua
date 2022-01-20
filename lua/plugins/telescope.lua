@@ -20,12 +20,37 @@ config.load_extension('media_files')
 -- Global remapping
 config.setup {
 	defaults = {
-
-    prompt_prefix = " ",
+    layout_config = {
+      width = 0.75,
+      prompt_position = "bottom",
+      preview_cutoff = 120,
+      horizontal = {mirror = false},
+      vertical = {mirror = false}
+    },
+    find_command = {
+      'rg', '--no-heading', '--with-filename', '--line-number', '--column', '--smart-case'
+    },   path_display = { "smart" },
+    prompt_prefix = " ",
     selection_caret = " ",
-    path_display = { "smart" },
-
-		mappings = {
+    entry_prefix = "  ",
+    initial_mode = "insert",
+    selection_strategy = "reset",
+    sorting_strategy = "descending",
+    layout_strategy = "horizontal",
+    file_sorter = require'telescope.sorters'.get_fuzzy_file,
+    file_ignore_patterns = {},
+    generic_sorter = require'telescope.sorters'.get_generic_fuzzy_sorter,
+    winblend = 0,
+    border = {},
+    borderchars = {'─', '│', '─', '│', '╭', '╮', '╯', '╰'},
+    color_devicons = true,
+    use_less = true,
+    set_env = {['COLORTERM'] = 'truecolor'}, -- default = nil,
+    file_previewer = require'telescope.previewers'.vim_buffer_cat.new,
+    grep_previewer = require'telescope.previewers'.vim_buffer_vimgrep.new,
+    qflist_previewer = require'telescope.previewers'.vim_buffer_qflist.new,
+    buffer_previewer_maker = require'telescope.previewers'.buffer_previewer_maker,
+    mappings = {
       i = {
         ["<C-n>"] = actions.cycle_history_next,
         ["<C-p>"] = actions.cycle_history_prev,
@@ -111,8 +136,3 @@ config.setup {
     -- please take a look at the readme of the extension you want to configure
   },
 }
-
-vim.api.nvim_exec([[
-  hi TelescopeNormal ctermbg=none guibg=none
-  hi TelescopeBorder ctermbg=none guibg=none
-]], true)
