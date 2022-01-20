@@ -46,6 +46,7 @@ set.laststatus = 0
 -- list chars settings (:h listchars)
 set.list = false
 set.listchars = {
+  space = '·',
   tab = '│·',
   nbsp = '⦸',
   extends = '»',
