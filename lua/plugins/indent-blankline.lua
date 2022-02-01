@@ -22,6 +22,8 @@ end
 
 config.setup {
   char = "│",
+  context_char = "│",
+  disable_with_nolist = false,
   show_first_indent_level = true,
   show_current_context = true,
   filetype_exclude = {
@@ -33,7 +35,12 @@ config.setup {
     'lspinfo',
     'packer',
     'NvimTree',
-    'dashboard'
+    'TelescopePrompt',
+    'TelescopeResults',
+    'lsp-installer',
+    'dashboard',
+    'man',
+    'godoc',
   },
   buftype_exclude = {
     'terminal',
