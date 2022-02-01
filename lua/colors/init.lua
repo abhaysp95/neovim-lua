@@ -39,7 +39,7 @@ require ('colors.nightfly')
 require ('colors.catppuccin')
 require ('colors.equinusocio_material')
 
-vim.cmd [[ colorscheme moonfly ]]
+vim.cmd [[ colorscheme blue-moon  ]]
 
 -- using background of terminal (generated from pywal)
 -- vim.cmd [[ au Colorscheme * hi Normal ctermbg=none guibg=none ]]
@@ -51,6 +51,7 @@ vim.api.nvim_exec([[
   hi Normal ctermbg=none guibg=none
   hi NormalFloat ctermbg=none guibg=none
   hi NormalNC ctermbg=none guibg=none
+  hi EndOfBuffer ctermbg=none guibg=none
   hi NvimTreeNormal ctermbg=none guibg=none
   hi NvimTreeNormalNC ctermbg=none guibg=none
   hi TelescopeNormal ctermbg=none guibg=none
