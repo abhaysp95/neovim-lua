@@ -20,9 +20,9 @@ kommentary_config.configure_language("default", {
     ignore_whitespace = true
 })
 
-kommentary_config.use_extended_mappings()
+-- kommentary_config.use_extended_mappings()
 
--- vim.g.kommentary_create_default_mappings = true  -- change it if you want to use custom bindings
+vim.g.kommentary_create_default_mappings = false  -- change it if you want to use custom bindings
 
 --[[ -- to configure for a language yourself (which is not supported by commentstring)
 config.configure_language("rust", {
