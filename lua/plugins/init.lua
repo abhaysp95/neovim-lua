@@ -70,7 +70,7 @@ packer_config.startup(function(use)
     -- event = "BufRead"
   }
   -- use 'kosayoda/nvim-lightbulb'
-  use 'mfussenegger/nvim-jdtls'
+  -- use 'mfussenegger/nvim-jdtls'
   use 'mfussenegger/nvim-dap'
 
   use 'kevinhwang91/nvim-bqf'
@@ -166,6 +166,8 @@ packer_config.startup(function(use)
   use 'folke/tokyonight.nvim'
   use 'tiagovla/tokyodark.nvim'
   use 'arzg/vim-colors-xcode'
+  use 'kyazdani42/blue-moon'
+  use { 'kyazdani42/nvim-palenight.lua', as = 'palenight' }
 	use {
     'norcalli/nvim-colorizer.lua',
     config = "require('plugins.colorizer')",
