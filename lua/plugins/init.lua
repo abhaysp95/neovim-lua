@@ -217,6 +217,19 @@ packer_config.startup(function(use)
     config = "require('plugins.gitsigns')"
   }
 
+  -- magit for neovim
+  use {
+    'TimUntersberger/neogit',
+    requires = 'nvim-lua/plenary.nvim'
+  }
+
+  -- better diff
+  use {
+    'sindrets/diffview.nvim',
+    requires = 'nvim-lua/plenary.nvim'
+  }
+
+
   -- floaterm
   use {
     'voldikss/vim-floaterm',
