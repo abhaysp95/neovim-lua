@@ -98,4 +98,17 @@ vim.api.nvim_set_keymap("n", "<leader>c", "<Plug>kommentary_motion_default", {})
 vim.api.nvim_set_keymap("x", "<leader>c", "<Plug>kommentary_visual_default", {})
 --]]
 
+------------
+-- neogit --
+------------
+keybind("n", "<leader>ng", ":Neogit<CR>", default_opts)
+
+--------------
+-- diffview --
+--------------
+keybind("n", "<leader>do", ":DiffviewOpen<CR>", default_opts)
+keybind("n", "<leader>dO", ":DiffviewOpen ", default_opts)
+keybind("n", "<leader>dc", ":DiffviewClose<CR>", default_opts)
+keybind("n", "<leader>df", ":DiffviewFileHistory<CR>", default_opts)
+
 -- NOTE: keybindings for lspconfig are in lsp/init.lua
