@@ -224,10 +224,19 @@ packer_config.startup(function(use)
     config = "require('plugins.diffview')"
   }
 
-  -- better diff
+  -- magit for neovim
   use {
-    'sindrets/diffview.nvim',
-    requires = 'nvim-lua/plenary.nvim'
+    'TimUntersberger/neogit',
+    requires = {
+      'nvim-lua/plenary.nvim',
+      'sindrets/diffview.nvim',
+    },
+    -- config = "require('plugins.neogit')",  -- buffer problem
+    config = function()
+      require("neogit").setup {
+        disable_commit_confirmation = true,
+      }
+    end,
   }
 
 
