@@ -247,7 +247,7 @@ packer_config.startup(function(use)
   use {
     'voldikss/vim-floaterm',
     config = "require('plugins.floaterm')",
-    cmd = "FloatermToggle"
+    cmd = { "FloatermNew", "FloatermToggle" }
   }
 
   -- Automatically set up your configuration after cloning packer.nvim
