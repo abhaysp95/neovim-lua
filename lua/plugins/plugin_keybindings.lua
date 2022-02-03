@@ -75,8 +75,12 @@ keybind('n' , '<Leader>gp' , [[<cmd>lua require'lspsaga.provider'.preview_defini
 --------------
 vim.cmd("let g:floaterm_keymap_new = '<leader>tn'")
 vim.cmd("let g:floaterm_keymap_toggle = '<leader>tl'")
+vim.cmd("let g:floaterm_keymap_prev = '<leader>tj'")
+vim.cmd("let g:floaterm_keymap_next = '<leader>tk'")
 keybind('n', '<Leader>tn', ':FloatermNew<CR>', default_opts)
 keybind('n', '<Leader>tl', ':FloatermToggle<CR>', default_opts)
+keybind('n', '<Leader>tj', ':FloatermPrev<CR>', default_opts)
+keybind('n', '<Leader>tk', ':FloatermNext<CR>', default_opts)
 
 ----------------
 -- kommentary --
