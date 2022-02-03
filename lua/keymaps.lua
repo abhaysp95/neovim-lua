@@ -170,6 +170,9 @@ keybind('n', '<M-j>', ':resize -2<CR>', default_opts)
 keybind('n', '<Localleader>th', '<C-w>t<C-w>H', default_opts)
 keybind('n', '<Localleader>tk', '<C-w>t<C-w>K', default_opts)
 
+-- tab bindings
+keybind('n', '<Localleader>gd', ':tabclose<CR>', default_opts)
+
 -- some expand settings
 keybind('n', '<Leader>hw', [[:h <C-R>=expand('<cword>')<CR><CR>]], default_opts)
 
