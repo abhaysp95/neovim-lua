@@ -56,7 +56,14 @@ vim.api.nvim_exec([[
   hi NvimTreeNormalNC ctermbg=none guibg=none
   hi TelescopeNormal ctermbg=none guibg=none
   hi TelescopeBorder ctermbg=none guibg=none
+  hi link FloatermBorder TelescopeBorder
 ]], true)
+
+vim.cmd([[
+  exec 'hi NvimTreeVertSplit ctermbg=none guibg=none' .
+    \ ' guifg=' . synIDattr(synIDtrans(hlID('TelescopeBorder')), 'fg', 'gui')
+    " \ ' ctermfg=' . synIDattr(synIDtrans(hlID('TelescopeBorder')), 'fg', 'cterm')
+]])
 
 vim.api.nvim_exec([[
   hi LineNr guibg=background
