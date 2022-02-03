@@ -8,9 +8,15 @@
 --  ==> lua/plugins/diffview.lua
 
 -- Lua
+
+local status_ok, diffview_config = pcall(require, "diffview")
+if not status_ok then
+  return
+end
+
 local cb = require'diffview.config'.diffview_callback
 
-require'diffview'.setup {
+diffview_config.setup {
   diff_binaries = false,    -- Show diffs for binaries
   enhanced_diff_hl = false, -- See ':h diffview-config-enhanced_diff_hl'
   use_icons = true,         -- Requires nvim-web-devicons

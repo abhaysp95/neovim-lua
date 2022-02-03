@@ -8,9 +8,12 @@
 --                         ▀▀
 --  => lua/plugins/neogit.lua
 
-local neogit = require("neogit")
+local status_ok, neogit_config = pcall(require, "neogit")
+if not status_ok then
+  return
+end
 
-neogit.setup {
+neogit_config.setup {
   disable_signs = false,
   disable_hint = false,
   disable_context_highlighting = false,
