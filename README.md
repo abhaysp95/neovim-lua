@@ -34,7 +34,7 @@ Like `sumneko-lua` and `jdtls` require such configuration.
 
 * **Colors:** Color configuration, both _general_ and _plugin's variables_ are setup in `lua/colors.lua` file. _General_ highlight group overrides are provided in `lua/colors.lua`, while _plugin specific_ highlight groups are stored in their individual configuration files. This is the only reason for putting `plugin` module after `colors` in `init.lua`.
 
-* _colpallete.lua_ file contains custom color palletes which can be used by plugins by loading individually in their configuration file.
+* <b><i>colpallete.lua</i></b>: file contains custom color palletes which can be used by plugins by loading individually in their configuration file.
 
 * **LSP:** All the `LSP` related stuff are in `lua/lsp/init.lua`. Note that _completion_ and other _LSP related_ plugin's configuration are in their configuration files in `lua/plugins` directory.
 
