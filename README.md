@@ -28,7 +28,7 @@ Like `sumneko-lua` and `jdtls` require such configuration.
 
 * **Plugins:** All the installed are in `lua/plugins/init.lua` and their configuration is stored in their respective files inside `lua/plugins`.
 
-* **Keybindings:** _General_ keybinds are stored in `lua/keymaps.lua` and _plugin specific_ keybindings are stored in `lua/plugins/plugin_keybindings.lua`.
+* **Keybindings:** _General_ keybinds are stored in `lua/keymaps.lua` and _plugin specific_ keybindings are stored in `lua/plugins/plugin_keybindings.lua`. Few plugins have some of the key-mapping stored in their config too.
 
 * **Settings:** _General_ settings are stored in `lua/settings.lua` and _plugin specific_ as mentioned before are stored in `lua/plugins`.
 
@@ -83,6 +83,8 @@ You can find all the installed in `lua/plugins/init.lua`. I'm mentioning some im
 ### git
 
 * lewis6991/gitsigns.nvim
+* sindrets/diffview.nvim
+* TimUntersberger/neogit
 
 ### text commentary
 
