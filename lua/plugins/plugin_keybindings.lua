@@ -83,12 +83,12 @@ keybind('n', '<Leader>tl', ':FloatermToggle<CR>', default_opts)
 ----------------
 
 -- extended mappings (default are the same)
-vim.api.nvim_set_keymap("n", "<leader>ckc", "<Plug>kommentary_line_increase", {})
-vim.api.nvim_set_keymap("n", "<leader>ck", "<Plug>kommentary_motion_increase", {})
-vim.api.nvim_set_keymap("x", "<leader>ck", "<Plug>kommentary_visual_increase", {})
-vim.api.nvim_set_keymap("n", "<leader>cjc", "<Plug>kommentary_line_decrease", {})
-vim.api.nvim_set_keymap("n", "<leader>cj", "<Plug>kommentary_motion_decrease", {})
-vim.api.nvim_set_keymap("x", "<leader>cj", "<Plug>kommentary_visual_decrease", {})
+keybind("n", "<leader>ckc", "<Plug>kommentary_line_increase", default_opts)
+keybind("n", "<leader>ck", "<Plug>kommentary_motion_increase", default_opts)
+keybind("x", "<leader>ck", "<Plug>kommentary_visual_increase", default_opts)
+keybind("n", "<leader>cjc", "<Plug>kommentary_line_decrease", default_opts)
+keybind("n", "<leader>cj", "<Plug>kommentary_motion_decrease", default_opts)
+keybind("x", "<leader>cj", "<Plug>kommentary_visual_decrease", default_opts)
 
 --[[ uncomment & change, when you want to use custom bindings (set in config
 lua/plugins/kommentary.lua) ]]
