@@ -47,7 +47,10 @@ packer_config.startup(function(use)
   use 'wbthomason/packer.nvim'
 
   -- vim-tmux navigator
-  use 'christoomey/vim-tmux-navigator'
+  use {
+    'christoomey/vim-tmux-navigator',
+    config = "require('plugins.vim-tmux-navigator')"
+  }
 
   -- LSP
   use {
