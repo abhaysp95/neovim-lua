@@ -247,6 +247,7 @@ packer_config.startup(function(use)
         integrations = {
           diffview = true,
         },
+        kind = "tab",
       }
     end,
   }
