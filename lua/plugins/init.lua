@@ -238,6 +238,15 @@ packer_config.startup(function(use)
     config = function()
       require("neogit").setup {
         disable_commit_confirmation = true,
+        signs = {
+          -- { CLOSED, OPENED }
+          section = { "", "" },
+          item = { "", "" },
+          hunk = { "", "" },
+        },
+        integrations = {
+          diffview = true,
+        },
       }
     end,
   }
