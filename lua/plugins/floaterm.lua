@@ -10,7 +10,7 @@
 vim.g.floaterm_title = 'cmd<$1|$2>'
 vim.g.floaterm_wintype = 'float'  -- split, vsplit, float
 vim.g.floaterm_position = 'center'
-vim.g.floaterm_width = 0.90
+vim.g.floaterm_width = 0.95
 vim.g.floaterm_height = 0.75
 vim.g.floaterm_borderchars = '─│─│┌┐┘└'  -- top, right, bottom, left, topleft, topright, botright, botleft
 vim.g.floaterm_autoclose = 0
