@@ -52,11 +52,11 @@ config.setup {
     buffer_previewer_maker = require'telescope.previewers'.buffer_previewer_maker,
     mappings = {
       i = {
-        ["<C-n>"] = actions.cycle_history_next,
-        ["<C-p>"] = actions.cycle_history_prev,
+        ["<C-k>"] = actions.cycle_history_next,
+        ["<C-j>"] = actions.cycle_history_prev,
 
-        ["<C-j>"] = actions.move_selection_next,
-        ["<C-k>"] = actions.move_selection_previous,
+        ["<C-p>"] = actions.move_selection_next,
+        ["<C-n>"] = actions.move_selection_previous,
 
         ["<C-c>"] = actions.close,
 
@@ -94,8 +94,8 @@ config.setup {
         ["<C-q>"] = actions.send_to_qflist + actions.open_qflist,
         ["<M-q>"] = actions.send_selected_to_qflist + actions.open_qflist,
 
-        ["j"] = actions.move_selection_next,
-        ["k"] = actions.move_selection_previous,
+        ["n"] = actions.move_selection_next,
+        ["p"] = actions.move_selection_previous,
         ["H"] = actions.move_to_top,
         ["M"] = actions.move_to_middle,
         ["L"] = actions.move_to_bottom,
