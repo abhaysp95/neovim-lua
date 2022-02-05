@@ -155,15 +155,16 @@ packer_config.startup(function(use)
   -- }
 
   -- colorschemes
+  use 'rafi/awesome-vim-colorschemes'
+  use 'mcchrish/vim-no-color-collections'
+  use 'Mangeshrex/uwu.vim'
+  use 'FrenzyExists/aquarium-vim'
+  use 'logico/typewriter-vim'
+  use 'preservim/vim-colors-pencil'
   use 'tanvirtin/monokai.nvim'
-  use 'ayu-theme/ayu-vim'
   use 'romgrk/doom-one.vim'
-  use 'cocopon/iceberg.vim'
-  use 'whatyouhide/vim-gotham'
   use 'srcery-colors/srcery-vim'
-  use 'gruvbox-community/gruvbox'
   use 'sainnhe/gruvbox-material'
-  use 'jacoborus/tender.vim'
   use 'jnurmine/Zenburn'
   use 'sainnhe/edge'
   use 'folke/tokyonight.nvim'
