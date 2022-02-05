@@ -39,7 +39,7 @@ require ('colors.nightfly')
 require ('colors.catppuccin')
 require ('colors.equinusocio_material')
 
-vim.cmd [[ colorscheme catppuccin  ]]
+vim.cmd [[ colorscheme meh  ]]
 
 -- using background of terminal (generated from pywal)
 -- vim.cmd [[ au Colorscheme * hi Normal ctermbg=none guibg=none ]]
