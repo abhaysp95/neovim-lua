@@ -59,11 +59,12 @@ vim.api.nvim_exec([[
   hi link FloatermBorder TelescopeBorder
 ]], true)
 
-vim.cmd([[
-  exec 'hi NvimTreeVertSplit ctermbg=none guibg=none' .
-    \ ' guifg=' . synIDattr(synIDtrans(hlID('TelescopeBorder')), 'fg', 'gui')
-    " \ ' ctermfg=' . synIDattr(synIDtrans(hlID('TelescopeBorder')), 'fg', 'cterm')
-]])
+-- some colorschemes don't support this
+-- vim.cmd([[
+--   exec 'hi NvimTreeVertSplit ctermbg=none guibg=none' .
+--     \ ' guifg=' . synIDattr(synIDtrans(hlID('TelescopeBorder')), 'fg', 'gui')
+--     " \ ' ctermfg=' . synIDattr(synIDtrans(hlID('TelescopeBorder')), 'fg', 'cterm')
+-- ]])
 
 vim.api.nvim_exec([[
   hi LineNr guibg=background
