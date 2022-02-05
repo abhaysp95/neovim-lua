@@ -11,7 +11,7 @@
 -- order is not supposed to be arbitrary
 
 require ('keymaps')
-require ('lsp')
 require ('plugins')
+require ('lsp')
 require ('colors')
 require ('settings')
