@@ -74,7 +74,6 @@ packer_config.startup(function(use)
   }
   -- use 'kosayoda/nvim-lightbulb'
   -- use 'mfussenegger/nvim-jdtls'
-  use 'mfussenegger/nvim-dap'
 
   use 'kevinhwang91/nvim-bqf'
   use 'airblade/vim-rooter'
