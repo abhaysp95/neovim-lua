@@ -131,14 +131,15 @@ set.fillchars = {
 --   print(vim.inspect(line))
 -- end
 
-if vim.fn.exists('termguicolors') ~= 0 then  --incase of true
-  if vim.fn.exits('winblend') ~= 0 then  -- incase of true
-    vim.opt.termguicolors = true
-    vim.opt.winblend = 0
-    vim.opt.wildoptions = 'pum'
-    vim.opt.pumblend = 25
-  end
-end
+vim.opt.termguicolors = true
+vim.opt.winblend = 0
+vim.opt.wildoptions = 'pum'
+vim.opt.pumblend = 10
+-- if vim.fn.exists('termguicolors') ~= 0 then  --incase of true
+--   if vim.fn.exits('winblend') ~= 0 then  -- incase of true
+--     -- those above 4 lines for options lived here
+--   end
+-- end
 
 -- fed up with autocomment
 -- cmd[[]]
