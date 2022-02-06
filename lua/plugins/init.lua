@@ -172,6 +172,10 @@ packer_config.startup(function(use)
   use 'tiagovla/tokyodark.nvim'
   use 'arzg/vim-colors-xcode'
   use 'kyazdani42/blue-moon'
+  use 'sainnhe/everforest'
+  use 'marko-cerovac/material.nvim'
+  use 'EdenEast/nightfox.nvim'
+  use 'projekt0n/github-nvim-theme'
   use { 'kyazdani42/nvim-palenight.lua', as = 'palenight' }
 	use {
     'norcalli/nvim-colorizer.lua',
