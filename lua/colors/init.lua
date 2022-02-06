@@ -29,7 +29,11 @@ vim.opt.background = 'dark'
 -- require colorscheme settings
 require ('colors.tokyonight')
 require ('colors.ayu')
+require ('colors.github')
 require ('colors.gruvbox-material')
+require ('colors.github')
+require ('colors.material')
+require ('colors.nightfox')
 require ('colors.srcery')
 require ('colors.tender')
 require ('colors.xcode')
