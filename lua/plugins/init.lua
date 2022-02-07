@@ -219,16 +219,16 @@ packer_config.startup(function(use)
   }
 
   -- focus-mode
-  use {
-    'folke/zen-mode.nvim',
-    config = "require('plugins.zen-mode')",
-    event = "BufWinEnter",
-  }
-  use {
-    'folke/twilight.nvim',
-    config = "require('plugins.twilight')",
-    event = "BufWinEnter",
-  }
+  -- use {
+  --   'folke/zen-mode.nvim',
+  --   config = "require('plugins.zen-mode')",
+  --   event = "BufWinEnter",
+  -- }
+  -- use {
+  --   'folke/twilight.nvim',
+  --   config = "require('plugins.twilight')",
+  --   event = "BufWinEnter",
+  -- }
 
 
   -- git labels
