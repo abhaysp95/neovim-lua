@@ -218,6 +218,19 @@ packer_config.startup(function(use)
     config = "require('plugins.nvim_tree')"
   }
 
+  -- focus-mode
+  use {
+    'folke/zen-mode.nvim',
+    config = "require('plugins.zen-mode')",
+    event = "BufWinEnter",
+  }
+  use {
+    'folke/twilight.nvim',
+    config = "require('plugins.twilight')",
+    event = "BufWinEnter",
+  }
+
+
   -- git labels
   use {
     'lewis6991/gitsigns.nvim',
