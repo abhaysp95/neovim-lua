@@ -180,7 +180,6 @@ packer_config.startup(function(use)
 	use {
     'norcalli/nvim-colorizer.lua',
     config = "require('plugins.colorizer')",
-    event = "BufRead",
   }
   use 'yunlingz/equinusocio-material.vim'
   use 'ChristianChiarulli/nvcode-color-schemes.vim'
