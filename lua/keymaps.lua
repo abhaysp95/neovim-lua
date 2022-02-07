@@ -183,6 +183,9 @@ keybind('n', 'c', '"_c', default_opts)
 -- TAB completion (seems problematic)
 keybind('i', '<TAB>', [[pumvisible() ? "\<C-n>" : "\<TAB>"]], vim.tbl_extend("force", expr_opts, default_opts))
 
+-- move to <++>
+keybind('n', '<Leader><', '/<++><CR>ca<', default_opts)
+
 vim.cmd [[ autocmd FileType help nnoremap <buffer>q :helpclose<CR> ]]
 
 -- Thoughts:  consider making function instead of writing every line, check if making a function and calling is worth it or not
