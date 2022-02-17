@@ -7,7 +7,7 @@
 --
 --  => lua/plugins/floaterm.lua
 
-vim.g.floaterm_title = 'cmd<$1|$2>'
+vim.g.floaterm_title = '-cmd-<$1|$2>'
 vim.g.floaterm_wintype = 'float'  -- split, vsplit, float
 vim.g.floaterm_position = 'bottom'
 vim.g.floaterm_width = 0.95
