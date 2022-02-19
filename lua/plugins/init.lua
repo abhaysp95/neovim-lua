@@ -76,7 +76,10 @@ packer_config.startup(function(use)
   -- use 'mfussenegger/nvim-jdtls'
 
   use 'kevinhwang91/nvim-bqf'
-  use 'airblade/vim-rooter'
+  use {
+    'airblade/vim-rooter',
+    config = "require('plugins.rooter')",
+}
 
   -- autocomplete
   use {
