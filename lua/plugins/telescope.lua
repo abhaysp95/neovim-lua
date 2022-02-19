@@ -22,7 +22,7 @@ config.setup {
 	defaults = {
     layout_config = {
       width = 0.75,
-      prompt_position = "bottom",
+      prompt_position = "top",
       preview_cutoff = 120,
       horizontal = {mirror = false},
       vertical = {mirror = false}
@@ -55,8 +55,8 @@ config.setup {
         ["<C-k>"] = actions.cycle_history_next,
         ["<C-j>"] = actions.cycle_history_prev,
 
-        ["<C-p>"] = actions.move_selection_next,
-        ["<C-n>"] = actions.move_selection_previous,
+        ["<C-n>"] = actions.move_selection_next,
+        ["<C-p>"] = actions.move_selection_previous,
 
         ["<C-c>"] = actions.close,
 
