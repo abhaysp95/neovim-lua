@@ -43,7 +43,7 @@ require ('colors.nightfly')
 require ('colors.catppuccin')
 require ('colors.equinusocio_material')
 
-vim.cmd [[ colorscheme tender  ]]
+vim.cmd [[ colorscheme uwu  ]]
 
 -- using background of terminal (generated from pywal)
 -- vim.cmd [[ au Colorscheme * hi Normal ctermbg=none guibg=none ]]
@@ -52,15 +52,15 @@ vim.cmd [[ colorscheme tender  ]]
 
 -- no background setttings
 vim.api.nvim_exec([[
-  hi Normal ctermbg=none guibg=none
-  hi NormalFloat ctermbg=none guibg=none
-  hi NormalNC ctermbg=none guibg=none
-  hi EndOfBuffer ctermbg=none guibg=none
-  hi NvimTreeNormal ctermbg=none guibg=none
-  hi NvimTreeNormalNC ctermbg=none guibg=none
-  hi TelescopeNormal ctermbg=none guibg=none
-  hi TelescopeBorder ctermbg=none guibg=none
-  hi link FloatermBorder TelescopeBorder
+  " hi Normal ctermbg=none guibg=none
+  " hi NormalFloat ctermbg=none guibg=none
+  " hi NormalNC ctermbg=none guibg=none
+  " hi EndOfBuffer ctermbg=none guibg=none
+  " hi NvimTreeNormal ctermbg=none guibg=none
+  " hi NvimTreeNormalNC ctermbg=none guibg=none
+  " hi TelescopeNormal ctermbg=none guibg=none
+  " hi TelescopeBorder ctermbg=none guibg=none
+  " hi link FloatermBorder TelescopeBorder
 ]], true)
 
 -- some colorschemes don't support this
