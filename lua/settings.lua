@@ -36,10 +36,10 @@ set.clipboard = { 'unnamed', 'unnamedplus' } -- copy/paste to system clipboard
 -- insert mode completion options
 set.completeopt = { 'menuone', 'noinsert', 'noselect', 'longest' }
 
-set.tabstop = 2
-set.softtabstop = 2
-set.shiftwidth = 2
-set.expandtab = true
+set.tabstop = 4
+set.softtabstop = 4
+set.shiftwidth = 4
+set.expandtab = false
 
 set.laststatus = 0
 
