@@ -43,7 +43,7 @@ require ('colors.nightfly')
 require ('colors.catppuccin')
 require ('colors.equinusocio_material')
 
-vim.cmd [[ colorscheme uwu  ]]
+vim.cmd [[ colorscheme monokai ]]
 
 -- using background of terminal (generated from pywal)
 -- vim.cmd [[ au Colorscheme * hi Normal ctermbg=none guibg=none ]]
@@ -83,3 +83,5 @@ vim.api.nvim_exec([[
   hi FoldColumn guibg=background
 ]], true)
 
+-- see the following link for colorschemes with nvim-treesitter support
+-- https://github.com/nvim-treesitter/nvim-treesitter/wiki/Colorschemes
