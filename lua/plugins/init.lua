@@ -157,7 +157,12 @@ packer_config.startup(function(use)
   -- }
 
   -- colorschemes
-  use 'rrethy/nvim-base16'
+  use 'NLKNguyen/papercolor-theme'
+  use 'fcpg/vim-farout'
+  use 'TroyFletcher/vim-colors-synthwave'
+  use 'morhetz/gruvbox'
+  use 'Domeee/mosel.nvim'
+  -- use 'rrethy/nvim-base16'
   use 'huyvohcmc/atlas.vim'
   use 'LuRsT/austere.vim'
   use {'Jorengarenar/vim-darkness', as = 'darkness'}
