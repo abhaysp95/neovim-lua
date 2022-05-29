@@ -136,11 +136,11 @@ packer_config.startup(function(use)
   }
 
   -- indent line
-  use {
+  --[[ use {
     'lukas-reineke/indent-blankline.nvim',
     config = "require('plugins.indent-blankline')",
     event = "BufRead"
-  }
+  } ]]
 
   -- icons
   use 'kyazdani42/nvim-web-devicons'
