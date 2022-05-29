@@ -30,23 +30,23 @@ tsconfigs.setup {
   autopairs = {
     enable = true,
   },
-  ensure_installed = "maintained",
-	-- ensure_installed = {
-	-- 	"bash",
-	-- 	"c",
-	-- 	"cpp",
-	-- 	"go",
-	-- 	"haskell",
-	-- 	"html",
-	-- 	"java",
-	-- 	"javascript",
-	-- 	"json",
-	-- 	"lua",
-	-- 	"python",
-	-- 	"rust",
-	-- 	"ruby",
-	-- 	"typescript"
-	-- },
+  -- ensure_installed = "maintained",
+  ensure_installed = {
+  	"bash",
+  	"c",
+  	"cpp",
+  	"go",
+  	"haskell",
+  	"html",
+  	"java",
+  	"javascript",
+  	"json",
+  	"lua",
+  	"python",
+  	"rust",
+  	"ruby",
+  	"typescript"
+  },
   ignore_instal = {},  -- ignore parsers
 	incremental_selection = {
 		enable = true,
