@@ -43,7 +43,7 @@ require ('colors.nightfly')
 require ('colors.catppuccin')
 require ('colors.equinusocio_material')
 
-vim.cmd [[ colorscheme monokai ]]
+vim.cmd [[ colorscheme mosel ]]
 
 -- using background of terminal (generated from pywal)
 -- vim.cmd [[ au Colorscheme * hi Normal ctermbg=none guibg=none ]]
@@ -52,7 +52,7 @@ vim.cmd [[ colorscheme monokai ]]
 
 -- no background setttings
 vim.api.nvim_exec([[
-  hi Normal ctermbg=none guibg=none
+  hi Normal ctermbg=none guibg=none ctermfg=250 guifg=#f7f7f7
   hi NormalFloat ctermbg=none guibg=none
   hi NormalNC ctermbg=none guibg=none
   hi EndOfBuffer ctermbg=none guibg=none
@@ -73,9 +73,9 @@ vim.api.nvim_exec([[
 vim.api.nvim_exec([[
   hi LineNr guibg=background
   hi CursorLineNr guibg=background
-  hi DiffAdd  guibg=background
-  hi DiffChange  guibg=background
-  hi DiffDelete  guibg=background
+  hi DiffAdded gui=None ctermbg=0  guibg=background
+  hi DiffChange gui=None ctermbg=0 guibg=background
+  hi DiffDelete gui=None ctermbg=0 guibg=background
   hi SignifySignAdd guibg=background
   hi SignifySignChange guibg=background
   hi SignifySignDelete guibg=background
