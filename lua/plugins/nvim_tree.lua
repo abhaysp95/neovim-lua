@@ -52,7 +52,30 @@ nvim_tree_config.setup {
 				file = true,
 				folder_arrow = true,
 			},
-			glyphs = {"‣ "},
+			-- glyphs = { "‣ " },
+			glyphs = {
+				folder = {
+                  arrow_closed = "",
+                  arrow_open = "",
+                  default = "",
+                  open = "",
+                  empty = "",
+                  empty_open = "",
+                  symlink = "",
+                  symlink_open = "",
+				},
+				git = {
+                  unstaged = "✗",
+                  staged = "✓",
+                  unmerged = "",
+                  renamed = "➜",
+                  untracked = "★",
+                  deleted = "",
+                  ignored = "◌",
+				},
+				default = "",
+				symlink = "",
+			}
 		},
 	},
 	view = {
