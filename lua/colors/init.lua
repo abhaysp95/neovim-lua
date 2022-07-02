@@ -27,11 +27,12 @@ end
 vim.opt.background = 'dark'
 
 -- require colorscheme settings
-require ('colors.tokyonight')
+--[[ require ('colors.tokyonight')
 require ('colors.ayu')
 require ('colors.github')
-require ('colors.gruvbox-material')
-require ('colors.github')
+require ('colors.gruvbox-material') ]]
+require ('colors.gruvbox-baby')
+--[[ require ('colors.github')
 require ('colors.material')
 require ('colors.nightfox')
 require ('colors.srcery')
@@ -41,9 +42,9 @@ require ('colors.kanagawa')
 require ('colors.moonfly')
 require ('colors.nightfly')
 require ('colors.catppuccin')
-require ('colors.equinusocio_material')
+require ('colors.equinusocio_material') ]]
 
-vim.cmd [[ colorscheme mosel ]]
+vim.cmd [[ colorscheme nvcode ]]
 
 -- using background of terminal (generated from pywal)
 -- vim.cmd [[ au Colorscheme * hi Normal ctermbg=none guibg=none ]]
@@ -52,7 +53,7 @@ vim.cmd [[ colorscheme mosel ]]
 
 -- no background setttings
 vim.api.nvim_exec([[
-  hi Normal ctermbg=none guibg=none ctermfg=250 guifg=#f7f7f7
+  hi Normal ctermbg=none guibg=none
   hi NormalFloat ctermbg=none guibg=none
   hi NormalNC ctermbg=none guibg=none
   hi EndOfBuffer ctermbg=none guibg=none
