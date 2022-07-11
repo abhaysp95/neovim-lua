@@ -14,9 +14,11 @@ if not status_ok then
   return
 end
 
+
 autopairs_config.setup({
-  enable_check_bracket_line = false,
-  disable_filetype = { "TelescopePrompt" },
+	check_ts = true,  -- treesitter integration
+	enable_check_bracket_line = false,
+	disable_filetype = { "TelescopePrompt" },
 })
 
 
