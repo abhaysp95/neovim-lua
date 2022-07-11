@@ -42,6 +42,8 @@ tsconfigs.setup {
   	"javascript",
   	"json",
   	"lua",
+	"markdown",
+	"markdown_inline",
   	"python",
   	"rust",
   	"ruby",
