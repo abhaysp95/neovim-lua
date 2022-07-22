@@ -20,15 +20,12 @@ nvim_tree_config.setup {
 	-- auto_close = true,  -- I'll update this after testing
 	actions = {
 		open_file = {
+			resize_window = true,
 			window_picker = {
 				enable = true,
 				exclude = {
-					filetype = {
-						'packer',
-					},
-					buftype = {
-						'terminal',
-					},
+					filetype = { 'packer', },
+					buftype = { 'terminal', },
 				},
 			},
 			quit_on_open = false,
@@ -80,7 +77,6 @@ nvim_tree_config.setup {
 	},
 	view = {
 		width = 28,
-		auto_resize = true
 	},
 	respect_buf_cwd = true,
 }
