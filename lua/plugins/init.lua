@@ -154,6 +154,7 @@ packer_config.startup(function(use)
 	use {
 		'RRethy/vim-illuminate',
 		config = "require('plugins.vim-illuminate')",
+		after = "neovim/nvim-lspconfig"
 	}
 
 	use { 'sbdchd/neoformat', }
@@ -238,9 +239,14 @@ packer_config.startup(function(use)
 	use 'ChristianChiarulli/nvcode-color-schemes.vim'
 
 	-- statusline
-	use {
+	--[[ use {
 		'famiu/feline.nvim',
 		requires = { 'kyazdani42/nvim-web-devicons' },
+	} ]]
+
+	use {
+		"nvim-lualine/lualine.nvim",
+		config = "require('plugins.lualine')"
 	}
 
 	-- telescope
