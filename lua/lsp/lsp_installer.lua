@@ -13,6 +13,7 @@ local servers = {
 	"pyright",
 	"solc",
 	"jdtls",
+	"lemminx",
 	"sumneko_lua",
 	"rust_analyzer",
 	"tsserver"
