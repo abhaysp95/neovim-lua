@@ -65,10 +65,13 @@ packer_config.startup(function(use)
 		config = "require('plugins.vim-tmux-navigator')"
 	}
 
-	use {
+	use { "williamboman/mason.nvim" }
+	use {"williamboman/mason-lspconfig.nvim" }
+
+	--[[ use {
 		'williamboman/nvim-lsp-installer',
 		config = "require('plugins.nvim-lsp-installer')"
-	}
+	} ]]
 
 	-- LSP
 	use { 'neovim/nvim-lspconfig', }
@@ -237,7 +240,20 @@ packer_config.startup(function(use)
 	-- colorschemes
 	use 'luisiacc/gruvbox-baby'
 	use 'ChristianChiarulli/nvcode-color-schemes.vim'
+	use {
+		"mcchrish/zenbones.nvim",
+		requires = "rktjmp/lush.nvim"
+	}
+	use 'NLKNguyen/papercolor-theme'
+	use 'ayu-theme/ayu-vim'
+	use 'EdenEast/nightfox.nvim'
+	use 'sainnhe/everforest'
+	-- use {'shaunsingh/oxocarbon.nvim', run = './install.sh'}
 
+	use {
+		'norcalli/nvim-colorizer.lua',
+		config = "require('plugins.colorizer')",
+	}
 	-- statusline
 	--[[ use {
 		'famiu/feline.nvim',

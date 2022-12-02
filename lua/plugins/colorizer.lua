@@ -9,7 +9,7 @@ if not status_ok then
 end
 
 colorizer.setup (
-  {'*';},
+  --[[ {'*';},
   {
     RGB = true;
     RRGGBB = true;
@@ -19,7 +19,7 @@ colorizer.setup (
     hsl_fn = true;
     css = true;
     css_fn = true;
-  }
+  } ]]
 )
 
 

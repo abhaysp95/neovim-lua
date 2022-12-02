@@ -32,6 +32,8 @@ require ('colors.ayu')
 require ('colors.github')
 require ('colors.gruvbox-material') ]]
 require ('colors.gruvbox-baby')
+require ('colors.zenbones')
+require ('colors.everforest')
 --[[ require ('colors.github')
 require ('colors.material')
 require ('colors.nightfox')
@@ -44,7 +46,7 @@ require ('colors.nightfly')
 require ('colors.catppuccin')
 require ('colors.equinusocio_material') ]]
 
-vim.cmd [[ colorscheme nvcode ]]
+vim.cmd [[ colorscheme everforest ]]
 
 -- using background of terminal (generated from pywal)
 -- vim.cmd [[ au Colorscheme * hi Normal ctermbg=none guibg=none ]]
@@ -53,7 +55,7 @@ vim.cmd [[ colorscheme nvcode ]]
 
 -- no background setttings
 vim.api.nvim_exec([[
-  hi Normal ctermbg=none guibg=none
+  hi Normal guibg=#182023
   hi NormalFloat ctermbg=none guibg=none
   hi NormalNC ctermbg=none guibg=none
   hi EndOfBuffer ctermbg=none guibg=none
@@ -63,6 +65,8 @@ vim.api.nvim_exec([[
   hi TelescopeBorder ctermbg=none guibg=none
   hi link FloatermBorder TelescopeBorder
 ]], true)
+  -- hi Normal ctermbg=none guibg=none
+  -- hi Normal ctermbg=5 guibg=#121212
 
 -- some colorschemes don't support this
 -- vim.cmd([[
