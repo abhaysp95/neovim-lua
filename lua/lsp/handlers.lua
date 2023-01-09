@@ -77,12 +77,12 @@ M.on_attach = function(client, bufnr)
 	end
 
 	lsp_keymaps(bufnr)
-	local status_ok, illuminate = pcall(require, "illuminate")
+	--[[ local status_ok, illuminate = pcall(require, "illuminate")
 	if not status_ok then
 		print "failed: status_ok illuminate"
 		return
-	end
-	illuminate.on_attach(client)
+	end ]]
+	-- illuminate.on_attach(client)
 	--[[ illuminate.setup( {
 		Illuminate_delay = 10,
 		Illuminate_ftblacklist = {'nerdtree', 'markdown'},
@@ -186,61 +186,11 @@ M.on_attach = function(client, bufnr)
 				-- List of backends found on: https://graphviz.org/docs/outputs/
 				-- Is used for input validation and autocompletion
 				-- Last updated: 2021-08-26
-				enabled_graphviz_backends = {
-					"bmp",
-					"cgimage",
-					"canon",
-					"dot",
-					"gv",
-					"xdot",
-					"xdot1.2",
-					"xdot1.4",
-					"eps",
-					"exr",
-					"fig",
-					"gd",
-					"gd2",
-					"gif",
-					"gtk",
-					"ico",
-					"cmap",
-					"ismap",
-					"imap",
-					"cmapx",
-					"imap_np",
-					"cmapx_np",
-					"jpg",
-					"jpeg",
-					"jpe",
-					"jp2",
-					"json",
-					"json0",
-					"dot_json",
-					"xdot_json",
-					"pdf",
-					"pic",
-					"pct",
-					"pict",
-					"plain",
-					"plain-ext",
-					"png",
-					"pov",
-					"ps",
-					"ps2",
-					"psd",
-					"sgi",
-					"svg",
-					"svgz",
-					"tga",
-					"tiff",
-					"tif",
-					"tk",
-					"vml",
-					"vmlz",
-					"wbmp",
-					"webp",
-					"xlib",
-					"x11",
+				enabled_graphviz_backends = { "bmp", "cgimage", "canon", "dot", "gv", "xdot", "xdot1.2", "xdot1.4", "eps",
+					"exr", "fig", "gd", "gd2", "gif", "gtk", "ico", "cmap", "ismap", "imap", "cmapx", "imap_np", "cmapx_np", "jpg",
+					"jpeg", "jpe", "jp2", "json", "json0", "dot_json", "xdot_json", "pdf", "pic", "pct", "pict", "plain", "plain-ext",
+					"png", "pov", "ps", "ps2", "psd", "sgi", "svg", "svgz", "tga", "tiff", "tif", "tk", "vml", "vmlz", "wbmp",
+					"webp", "xlib", "x11",
 				},
 			},
 		},
@@ -283,7 +233,7 @@ end
 	-- there are some more supports (check old config if needed)
 	M.capabilites = vim.lsp.protocol.make_client_capabilities()
 	M.capabilites.textDocument.completion.completionItem.snippetSupport = true
-	M.capabilites = cmp_nvim_lsp.update_capabilities(M.capabilites)
+	M.capabilites = cmp_nvim_lsp.default_capabilities(M.capabilites)
 
 end
 

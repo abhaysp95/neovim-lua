@@ -42,19 +42,21 @@ diffview_config.setup {
   },
   file_history_panel = {
 	  log_options = {
-		  single_file = {
-			  max_count = 512,  -- Limit the number of commits
-			  follow = true,  -- Follow renames (only for single file)
-			  merges = false,       -- List only merge commits
-			  no_merges = true,    -- List no merge commits
-			  reverse = false,      -- List commits in reverse order
-		  },
-		  multi_file = {
-			  max_count = 128,
-			  -- follow = false   -- `follow` only applies to single-file history
-			  merges = false,       -- List only merge commits
-			  no_merges = true,    -- List no merge commits
-			  reverse = false,      -- List commits in reverse order
+		  git = {  -- seems like diffview is adding support for different vcs too
+			  single_file = {
+				  max_count = 512,  -- Limit the number of commits
+				  follow = true,  -- Follow renames (only for single file)
+				  merges = false,       -- List only merge commits
+				  no_merges = true,    -- List no merge commits
+				  reverse = false,      -- List commits in reverse order
+			  },
+			  multi_file = {
+				  max_count = 128,
+				  -- follow = false   -- `follow` only applies to single-file history
+				  merges = false,       -- List only merge commits
+				  no_merges = true,    -- List no merge commits
+				  reverse = false,      -- List commits in reverse order
+			  },
 		  },
 	  },
   },

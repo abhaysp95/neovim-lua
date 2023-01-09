@@ -19,7 +19,7 @@ local diagnostics = {
 local diff = {
 	"diff",
 	colored = false,
-	symbols = { added = "", modified = "", removed = "" }, -- changes diff symbols
+	symbols = { added = " ", modified = " ", removed = " " }, -- changes diff symbols
 	cond = hide_in_width,
 }
 
@@ -30,7 +30,7 @@ local filetype = {
 
 local location = {
 	"location",
-	padding = 0,
+	padding = 1,
 }
 
 local spaces = function()
@@ -49,7 +49,7 @@ lualine.setup {
 	},
 	sections = {
 		lualine_a = { "mode" },
-		lualine_b = {"branch"},
+		lualine_b = { "filename", "branch"},
 		lualine_c = { diagnostics },
 		lualine_x = { diff, spaces, "encoding", filetype },
 		lualine_y = { location },

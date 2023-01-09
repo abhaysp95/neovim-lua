@@ -65,66 +65,35 @@ packer_config.startup(function(use)
 		config = "require('plugins.vim-tmux-navigator')"
 	}
 
-	use { "williamboman/mason.nvim" }
-	use {"williamboman/mason-lspconfig.nvim" }
-
-	--[[ use {
-		'williamboman/nvim-lsp-installer',
-		config = "require('plugins.nvim-lsp-installer')"
-	} ]]
-
-	-- LSP
-	use { 'neovim/nvim-lspconfig', }
-
-	-- LSP stuffs
 	use {
-		'glepnir/lspsaga.nvim',
-		-- event = "BufRead",
-		config = "require('plugins.lspsaga')"
-	}
-	use {
-		'onsails/lspkind-nvim',
-		-- event = "BufRead"
-	}
-	-- use 'kosayoda/nvim-lightbulb'
-
-	-- Debugging  (setup on next free day)
-	--[[ use {
-		"mfussenegger/nvim-dap",
-		opt = true,
-		event = "BufReadPre",
-		module = { "dap" },
-		wants = { "nvim-dap-virtual-text", "DAPInstall.nvim", "nvim-dap-ui", "nvim-dap-python", "which-key.nvim" },
+		'VonHeikemen/lsp-zero.nvim',
 		requires = {
-			"Pocco81/DAPInstall.nvim",
-			"theHamsta/nvim-dap-virtual-text",
-			"rcarriga/nvim-dap-ui",
-			"mfussenegger/nvim-dap-python",
-			"nvim-telescope/telescope-dap.nvim",
-			{ "leoluz/nvim-dap-go", module = "dap-go" },
-			{ "jbyuki/one-small-step-for-vimkind", module = "osv" },
-		},
-		config = "require('plugins.nvim-dap')",
-	} ]]
+			-- LSP Support
+			{'neovim/nvim-lspconfig'},
+			{'williamboman/mason.nvim'},
+			{'williamboman/mason-lspconfig.nvim'},
 
+			-- Autocompletion
+			{
+				'hrsh7th/nvim-cmp',
+				config = "require('plugins.nvim-cmp')"
+			},
+			{'hrsh7th/cmp-buffer'},
+			{'hrsh7th/cmp-path'},
+			{'saadparwaiz1/cmp_luasnip'},
+			{'hrsh7th/cmp-nvim-lsp'},
+			{'hrsh7th/cmp-nvim-lua'},
 
-
-	-- new
-	--[[ use {
-		'mfussenegger/nvim-dap',
-		config = "require('plugins.nvim-dap')",
+			-- Snippets
+			{'L3MON4D3/LuaSnip'},
+			{'rafamadriz/friendly-snippets'},
+		}
 	}
-	use {
-		'rcarriga/nvim-dap-ui',
-		after = 'mfussenegger/nvim-dap',
-	}
-	use {'Pocco81/DAPInstall.nvim'} ]]
+
+	-- use 'glepnir/lspsaga.nvim'
 
 	-- use java
 	use 'mfussenegger/nvim-jdtls'
-
-	-- null-ls (new)
-	use {'jose-elias-alvarez/null-ls.nvim'}
 
 	use 'kevinhwang91/nvim-bqf'
 	use {
@@ -132,42 +101,10 @@ packer_config.startup(function(use)
 		config = "require('plugins.rooter')",
 	}
 
-	-- autocomplete
-	use {
-		'hrsh7th/nvim-cmp',
-		requires = {
-			'L3MON4D3/LuaSnip',
-			'hrsh7th/cmp-path',
-			'hrsh7th/cmp-buffer',
-			'hrsh7th/cmp-nvim-lsp',
-			'hrsh7th/cmp-nvim-lua',
-			'saadparwaiz1/cmp_luasnip',
-		},
-		-- event = "InsertEnter",
-		config = "require('plugins.nvim-cmp')",
-	}
-
-	-- load after 'luasnip' (new)
-	use {
-		'rafamadriz/friendly-snippets',
-		after = 'hrsh7th/nvim-cmp',
-	}
-
-	-- new
-	use {
-		'RRethy/vim-illuminate',
-		config = "require('plugins.vim-illuminate')",
-		after = "neovim/nvim-lspconfig"
-	}
-
 	use { 'sbdchd/neoformat', }
 
 	-- autopairs
-	use {
-		'windwp/nvim-autopairs',
-		config = "require('plugins.nvim-autopairs')",
-		after = "nvim-cmp"
-	}
+	-- use { 'windwp/nvim-autopairs' }
 
 	-- surround
 	use {
@@ -175,6 +112,9 @@ packer_config.startup(function(use)
 		event = "BufEnter",
 		config = "require('plugins.surround')"
 	}
+
+	-- d2-vim
+	use { 'terrastruct/d2-vim' }
 
 	-- manage buffers (new)
 	use {'moll/vim-bbye'}
@@ -191,15 +131,6 @@ packer_config.startup(function(use)
 		config = "require('plugins.nvim-treesitter')"
 	}
 
-	-- commentary (not working for some unknown reasons right now)
-	-- use {
-	-- 	'JoosepAlviste/nvim-ts-context-commentstring',
-	-- 	requires = {"nvim-treesitter/nvim-treesitter"},
-	-- }
-	-- use {
-	-- 	'numToStr/Comment.nvim',
-	-- 	config = "requir('plugins.comment')",
-	-- }
 	use {
 	'b3nj5m1n/kommentary',
 	event = "BufEnter",
@@ -213,29 +144,8 @@ packer_config.startup(function(use)
 		config = "require('plugins.vista')"
 	}
 
-	-- indent line
-	--[[ use {
-	'lukas-reineke/indent-blankline.nvim',
-	config = "require('plugins.indent-blankline')",
-	event = "BufRead"
-	} ]]
-
 	-- icons
 	use 'kyazdani42/nvim-web-devicons'
-
-	-- startpage
-	-- use {
-	--   'glepnir/dashboard-nvim',
-	--   config = "require('plugins.dashboard')"
-	-- }
-	-- use {
-	--   'goolord/alpha-nvim',
-	--   requires = 'kyazdani42/nvim-web-devicons',
-	--   config = "require('plugins.alpha-nvim')",
-	-- }
-
-	-- maybe try it (though I don't need it) (new)
-	-- use {'goolord/alpha-nvim'}
 
 	-- colorschemes
 	use 'luisiacc/gruvbox-baby'
@@ -254,11 +164,6 @@ packer_config.startup(function(use)
 		'norcalli/nvim-colorizer.lua',
 		config = "require('plugins.colorizer')",
 	}
-	-- statusline
-	--[[ use {
-		'famiu/feline.nvim',
-		requires = { 'kyazdani42/nvim-web-devicons' },
-	} ]]
 
 	use {
 		"nvim-lualine/lualine.nvim",
@@ -429,3 +334,52 @@ end)
 	use { 'catppuccin/nvim', as = 'catppuccin' }
 	use { 'bluz71/vim-moonfly-colors', as = 'moonfly' }
 	use { 'bluz71/vim-nightfly-guicolors', as = 'nightfly' } ]]
+
+
+	-- LSP
+	-- use { 'neovim/nvim-lspconfig', }
+
+	-- -- LSP stuffs
+	-- use {
+	-- 	'glepnir/lspsaga.nvim',
+	-- 	-- event = "BufRead",
+	-- 	config = "require('plugins.lspsaga')"
+	-- }
+	-- use {
+	-- 	'onsails/lspkind-nvim',
+	-- 	-- event = "BufRead"
+	-- }
+	-- -- use 'kosayoda/nvim-lightbulb'
+
+	-- Debugging  (setup on next free day)
+	--[[ use {
+		"mfussenegger/nvim-dap",
+		opt = true,
+		event = "BufReadPre",
+		module = { "dap" },
+		wants = { "nvim-dap-virtual-text", "DAPInstall.nvim", "nvim-dap-ui", "nvim-dap-python", "which-key.nvim" },
+		requires = {
+			"Pocco81/DAPInstall.nvim",
+			"theHamsta/nvim-dap-virtual-text",
+			"rcarriga/nvim-dap-ui",
+			"mfussenegger/nvim-dap-python",
+			"nvim-telescope/telescope-dap.nvim",
+			{ "leoluz/nvim-dap-go", module = "dap-go" },
+			{ "jbyuki/one-small-step-for-vimkind", module = "osv" },
+		},
+		config = "require('plugins.nvim-dap')",
+	} ]]
+
+
+
+	-- new
+	--[[ use {
+		'mfussenegger/nvim-dap',
+		config = "require('plugins.nvim-dap')",
+	}
+	use {
+		'rcarriga/nvim-dap-ui',
+		after = 'mfussenegger/nvim-dap',
+	}
+	use {'Pocco81/DAPInstall.nvim'} ]]
+
