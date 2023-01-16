@@ -158,6 +158,19 @@ packer_config.startup(function(use)
 	use 'ayu-theme/ayu-vim'
 	use 'EdenEast/nightfox.nvim'
 	use 'sainnhe/everforest'
+	use 'yazeed1s/oh-lucy.nvim'
+	use 'yazeed1s/minimal.nvim'
+	use 'ray-x/starry.nvim'
+	use 'RRethy/nvim-base16'
+	use { 'catppuccin/nvim', as = 'catppuccin' }
+	use 'yunlingz/equinusocio-material.vim'
+	use 'rebelot/kanagawa.nvim'
+	use { 'bluz71/vim-moonfly-colors', as = 'moonfly' }
+	use { 'bluz71/vim-nightfly-guicolors', as = 'nightfly' }
+	use 'srcery-colors/srcery-vim'
+	use 'folke/tokyonight.nvim'
+	use 'tiagovla/tokyodark.nvim'
+	use 'arzg/vim-colors-xcode'
 	-- use {'shaunsingh/oxocarbon.nvim', run = './install.sh'}
 
 	use {
@@ -311,29 +324,19 @@ end)
 	use 'preservim/vim-colors-pencil'
 	use 'tanvirtin/monokai.nvim'
 	use 'romgrk/doom-one.vim'
-	use 'srcery-colors/srcery-vim'
 	use 'sainnhe/gruvbox-material'
 	use 'jnurmine/Zenburn'
 	use 'sainnhe/edge'
-	use 'folke/tokyonight.nvim'
-	use 'tiagovla/tokyodark.nvim'
-	use 'arzg/vim-colors-xcode'
 	use 'kyazdani42/blue-moon'
 	use 'sainnhe/everforest'
 	use 'marko-cerovac/material.nvim'
-	use 'EdenEast/nightfox.nvim'
 	use 'projekt0n/github-nvim-theme' ]]
 	--[[ use { 'kyazdani42/nvim-palenight.lua', as = 'palenight' }
 	use {
 	'norcalli/nvim-colorizer.lua',
 	config = "require('plugins.colorizer')",
 	}
-	use 'yunlingz/equinusocio-material.vim'
-	use 'rebelot/kanagawa.nvim'
-	use { 'rose-pine/neovim', as = 'rose-pine' }
-	use { 'catppuccin/nvim', as = 'catppuccin' }
-	use { 'bluz71/vim-moonfly-colors', as = 'moonfly' }
-	use { 'bluz71/vim-nightfly-guicolors', as = 'nightfly' } ]]
+	use { 'rose-pine/neovim', as = 'rose-pine' } ]]
 
 
 	-- LSP
